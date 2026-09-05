@@ -93,7 +93,8 @@
     </div>
   </nav>
 
-  <!-- Google AdSense Official Leaderboard Unit -->
+  <!-- Google AdSense Official Leaderboard Unit (Conditionally Shown) -->
+  {% block top_ad %}
   <aside class="ad-leaderboard-container" aria-label="Advertisement">
     <div class="ad-slot-frame">
       <span class="ad-disclosure-label">ADVERTISEMENT</span>
@@ -106,6 +107,7 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   </aside>
+  {% endblock %}
 
   <!-- Main Viewport Content -->
   <main id="mainContent">

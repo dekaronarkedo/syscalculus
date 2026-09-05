@@ -3,7 +3,7 @@ title SysCalculus - Automated GitHub & Cloud Deployment
 color 0A
 
 echo ===============================================================================
-echo            RUNTIMEZERO - 1-CLICK AUTOMATED GITHUB & CLOUD PUBLISHER
+echo            SYSCALCULUS - 1-CLICK AUTOMATED GITHUB & CLOUD PUBLISHER
 echo ===============================================================================
 echo.
 echo [1/3] Git repository is initialized and all 37 platform files are committed.

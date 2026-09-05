@@ -1,4 +1,4 @@
-# 🚀 RUNTIMEZERO: $0 MALİYETLE 2 DAKİKADA CANLIYA ALMA REHBERİ
+# 🚀 SYSCALCULUS: $0 MALİYETLE 2 DAKİKADA CANLIYA ALMA REHBERİ
 ### *Sıfır Masrafla 24/7 Bulutta Yaşayan Otonom Dijital Şirket*
 
 Bu rehber, **SysCalculus** sistemini yerel bilgisayarından çıkarıp dünya çapında en hızlı sunucularda (**Cloudflare Pages**) **$0 maliyetle** yayına almanı ve **GitHub Actions** ile 24/7 otonom çalıştırmanı sağlar.

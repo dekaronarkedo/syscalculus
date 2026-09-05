@@ -2215,12 +2215,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2228,12 +2228,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2241,12 +2241,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2254,12 +2254,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2267,12 +2267,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2280,12 +2280,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2293,12 +2293,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2306,12 +2306,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2423,12 +2423,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2436,12 +2436,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2449,12 +2449,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2462,12 +2462,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2475,12 +2475,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2488,12 +2488,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2501,12 +2501,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2514,12 +2514,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2527,12 +2527,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2540,12 +2540,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2553,12 +2553,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2566,12 +2566,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2579,12 +2579,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2592,12 +2592,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2605,12 +2605,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2618,12 +2618,12 @@
   },
   {
     "platform": "twitter",
-    "handle": "@runtimezerodev",
+    "handle": "@syscalculusdev",
     "thread": [
       "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
       "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
       "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
       "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
     ],
     "status": "pending",
@@ -2732,5 +2732,1045 @@
     ],
     "status": "pending",
     "created_at": "2026-09-05T16:57:16.631011"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T16:59:59.883054"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:00:19.473187"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.513727"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.513727"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.513727"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.513727"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.515230"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.515230"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.515230"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:02:52.515230"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.192549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.192549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.192549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.192549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.192549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.192549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.193549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:12.193549"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.823735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.823735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.823735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.823735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.824735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.824735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.824735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:03:31.824735"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:34.145497"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:04:48.752881"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:05:08.384200"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@syscalculusdev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://syscalculus.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:06:48.202302"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/aws-egress-calculator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/airgapped-log-sanitizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/kafka-consumer-lag-estimator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/db-deadlock-simulator.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/docker-compose-converter.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/k8s-oom-killer-sizing.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/llm-vram-sizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
+  },
+  {
+    "platform": "twitter",
+    "handle": "@runtimezerodev",
+    "thread": [
+      "\ud83e\uddf5 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
+      "2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
+      "3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
+      "4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n\ud83d\udc49 https://runtimezero.dev/tools/crontab-visualizer.html\n\n(100% client-side, zero logs or data sent to servers)",
+      "5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
+    ],
+    "status": "pending",
+    "created_at": "2026-09-05T17:07:04.216813"
   }
 ]

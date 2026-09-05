@@ -3,7 +3,7 @@ title SysCalculus - Autonomous Cloud & Systems Simulator Engine
 color 0B
 
 echo ===============================================================================
-echo                RUNTIMEZERO (syscalculus.dev) - GHOST FOUNDER DAC
+echo                SYSCALCULUS (syscalculus.dev) - GHOST FOUNDER DAC
 echo ===============================================================================
 echo [1/3] Verifying Python runtime environment...
 python --version >nul 2>&1

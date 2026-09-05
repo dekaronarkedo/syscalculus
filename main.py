@@ -107,7 +107,7 @@ class SysCalculusDAC:
                 pass
 
         print("\n" + "="*65)
-        print("  RUNTIMEZERO (syscalculus.dev) - GHOST FOUNDER DAC DASHBOARD")
+        print("  SYSCALCULUS (syscalculus.dev) - GHOST FOUNDER DAC DASHBOARD")
         print("="*65)
         print(f"  * Platform URL:       http://localhost:{PORT}")
         print(f"  * Active Tools:       {len(tools)} Systems Simulators")
@@ -122,7 +122,7 @@ class SysCalculusDAC:
     def show_sentinel(self):
         """Displays detailed self-healing telemetry and recent incidents."""
         print("\n" + "="*65)
-        print("  RUNTIMEZERO - AUTONOMOUS SELF-HEALING SENTINEL TELEMETRY")
+        print("  SYSCALCULUS - AUTONOMOUS SELF-HEALING SENTINEL TELEMETRY")
         print("="*65)
         print(f"  * Sentinel Status:     {self.sentinel.last_status}")
         print(f"  * Total Patrol Cycles: {self.sentinel.total_cycles}")
