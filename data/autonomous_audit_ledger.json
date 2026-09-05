@@ -1,10 +1,10 @@
 {
-  "sentinel_uptime_seconds": 482,
-  "total_cycles": 26,
-  "anomalies_detected": 2,
-  "auto_heals_executed": 2,
+  "sentinel_uptime_seconds": 693,
+  "total_cycles": 37,
+  "anomalies_detected": 5,
+  "auto_heals_executed": 5,
   "last_status": "100% HEALTHY / OPERATIONAL",
-  "last_cycle_timestamp": "2026-09-05T16:54:39.125020Z",
+  "last_cycle_timestamp": "2026-09-05T16:58:09.483300Z",
   "recent_incidents": [
     {
       "timestamp": "2026-09-05T16:46:37.572795Z",
@@ -16,6 +16,24 @@
       "timestamp": "2026-09-05T16:54:15.590352Z",
       "type": "CORRUPTED_OR_OUTDATED_BUILD",
       "reason": "File changed or added: content\\tools\\airgapped-log-sanitizer.md",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T16:55:16.208833Z",
+      "type": "HTTP_SERVER_DOWN",
+      "reason": "HTTP Probe failed on http://localhost:3000/: HTTP Error 404: File not found",
+      "action_taken": "Restarted ServerController on port 3000"
+    },
+    {
+      "timestamp": "2026-09-05T16:55:31.341663Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: static\\css\\syscalculus.css",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T16:56:48.199747Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: templates\\base.html",
       "action_taken": "Executed build.build_site() cleanly."
     }
   ]
