@@ -32,6 +32,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+cloudflared.exe
 
 # RuntimeZero Scratch & Temporary logs
 scratch/
