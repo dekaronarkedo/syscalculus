@@ -1,0 +1,64 @@
+<rss version="2.0">
+  <channel>
+    <title>SysCalculus | Air-Gapped Systems Simulators</title>
+    <link>https://syscalculus.dev</link>
+    <description>Zero-server-latency visual systems simulators and post-mortems for cloud architects.</description>
+    <language>en-us</language>
+    <item>
+      <title>AWS Egress Cost Calculator &amp; Zero-Egress Architecture</title>
+      <link>https://syscalculus.dev/tools/aws-egress-calculator.html</link>
+      <description>Calculate monthly AWS Internet egress costs vs Cloudflare R2 and Hetzner. Includes production Terraform blueprints to eliminate egress bandwidth fees.</description>
+      <guid>https://syscalculus.dev/tools/aws-egress-calculator.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Air-Gapped Zero-Trust Log Sanitizer</title>
+      <link>https://syscalculus.dev/tools/airgapped-log-sanitizer.html</link>
+      <description>100% in-browser air-gapped log sanitizer. Scrub AWS access keys, Bearer JWTs, database passwords, and IP addresses with zero server transmission.</description>
+      <guid>https://syscalculus.dev/tools/airgapped-log-sanitizer.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apache Kafka Partition Lag &amp; Rebalance Time Estimator</title>
+      <link>https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html</link>
+      <description>Calculate Kafka partition lag recovery time, consumer group rebalance windows, and partition assignment efficiency.</description>
+      <guid>https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Database Connection Pool &amp; Deadlock Simulator</title>
+      <link>https://syscalculus.dev/tools/db-deadlock-simulator.html</link>
+      <description>Interactive visual simulator for database connection pool starvation, thread queuing, and P99 latency spikes. Includes HikariCP mathematical sizing formula and PostgreSQL outage post-mortem.</description>
+      <guid>https://syscalculus.dev/tools/db-deadlock-simulator.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Docker Run to Production Docker Compose Converter</title>
+      <link>https://syscalculus.dev/tools/docker-compose-converter.html</link>
+      <description>Convert terminal docker run commands into production-grade, hardened docker-compose.yml files with securityOpts, healthchecks, and resource limits.</description>
+      <guid>https://syscalculus.dev/tools/docker-compose-converter.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Kubernetes Cgroup v2 OOM-Killer Threshold Calculator</title>
+      <link>https://syscalculus.dev/tools/k8s-oom-killer-sizing.html</link>
+      <description>Calculate Linux cgroups v2 memory.max thresholds, page cache reclaim rates, and RSS headroom to prevent Kubernetes OOMKilled 137 pod terminations.</description>
+      <guid>https://syscalculus.dev/tools/k8s-oom-killer-sizing.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>LLM VRAM &amp; Quantization Sizer (FP16 / INT8 / INT4)</title>
+      <link>https://syscalculus.dev/tools/llm-vram-sizer.html</link>
+      <description>Accurately compute GPU VRAM memory requirements for LLaMA 3, DeepSeek, and Mistral models. Calculates weights, KV-cache, and CUDA overhead.</description>
+      <guid>https://syscalculus.dev/tools/llm-vram-sizer.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Linux Crontab Visualizer &amp; 24h Execution Heatmap</title>
+      <link>https://syscalculus.dev/tools/crontab-visualizer.html</link>
+      <description>Interactive 5-part Linux crontab visualizer, 24-hour execution density heatmap, and next 10 run timestamps with human-readable English breakdown.</description>
+      <guid>https://syscalculus.dev/tools/crontab-visualizer.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

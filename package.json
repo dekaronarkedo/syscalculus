@@ -1,0 +1,12 @@
+{
+  "name": "syscalculus",
+  "version": "1.0.0",
+  "description": "SysCalculus - Deterministic Systems Engineering & Cloud Mathematical Modeling",
+  "main": "worker.js",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.100.0"
+  }
+}

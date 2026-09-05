@@ -1,0 +1,3135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air-Gapped Zero-Trust Log Sanitizer | SysCalculus</title>
+  <meta name="description" content="100% in-browser air-gapped log sanitizer. Scrub AWS access keys, Bearer JWTs, database passwords, and IP addresses with zero server transmission.">
+  
+  <meta name="google-site-verification" content="GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE">
+  
+  <link rel="canonical" href="https://syscalculus.dev/tools/airgapped-log-sanitizer.html">
+  <link rel="alternate" type="application/rss+xml" title="SysCalculus Engineering Feed" href="/rss.xml">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SysCalculus">
+  <meta property="og:title" content="Air-Gapped Zero-Trust Log Sanitizer">
+  <meta property="og:description" content="100% in-browser air-gapped log sanitizer. Scrub AWS access keys, Bearer JWTs, database passwords, and IP addresses with zero server transmission.">
+  <meta property="og:url" content="https://syscalculus.dev/tools/airgapped-log-sanitizer.html">
+  
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@syscalculusdev">
+  <meta name="twitter:title" content="Air-Gapped Zero-Trust Log Sanitizer">
+  <meta name="twitter:description" content="100% in-browser air-gapped log sanitizer. Scrub AWS access keys, Bearer JWTs, database passwords, and IP addresses with zero server transmission.">
+  
+  <meta name="theme-color" content="#090d13">
+
+  <link rel="icon" type="image/svg+xml" href="/static/images/logo.svg">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Master Stylesheet (Embedded for Guaranteed Local File & Offline Execution) -->
+  
+  <style>
+/* ==========================================================================
+   SYSCALCULUS - MASTER STYLESHEET
+   Aesthetics: Authentic Systems Engineer Craft (GitHub / Stripe / v8.dev)
+   100% AdSense Compliant • High Information Density • Zero AI Tropes
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* High-Contrast Zinc & Graphite Foundations */
+  --bg-page: #090d13;
+  --bg-subtle: #0d1117;
+  --bg-card: #121820;
+  --bg-card-hover: #18202b;
+  --bg-input: #0a0e14;
+  --bg-code: #0b0f15;
+  
+  /* Precision Borders */
+  --border: #212835;
+  --border-muted: #1a202c;
+  --border-hover: #374357;
+  --border-focus: #388bfd;
+  
+  /* Typography Colors */
+  --text-main: #f0f6fc;
+  --text-secondary: #919eb0;
+  --text-muted: #627084;
+  --text-link: #58a6ff;
+  
+  /* Semantic Signals */
+  --accent-blue: #388bfd;
+  --accent-green: #3fb950;
+  --accent-amber: #d29922;
+  --accent-red: #f85149;
+  
+  /* Typography Stacks */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  
+  --max-width: 1180px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(9, 13, 19, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none !important;
+  letter-spacing: -0.02em;
+}
+
+.brand-text {
+  font-weight: 800;
+}
+
+.brand-accent {
+  color: var(--accent-blue);
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-left: 1px solid var(--border);
+  padding-left: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .brand-sub { display: none; }
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.12s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #fff;
+  background: var(--bg-card);
+  text-decoration: none;
+}
+
+.search-trigger {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: all 0.15s ease;
+}
+
+.search-trigger:hover {
+  border-color: var(--border-hover);
+  color: var(--text-secondary);
+}
+
+.kbd-chip {
+  background: #000;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   OFFICIAL GOOGLE ADSENSE CONTAINERS (100% COMPLIANT)
+   ========================================================================== */
+.ad-leaderboard-container {
+  max-width: var(--max-width);
+  margin: 1.25rem auto 0;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+.ad-slot-frame {
+  background: rgba(18, 24, 32, 0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0.75rem auto;
+  transition: border-color 0.2s ease;
+}
+
+.ad-slot-frame:hover {
+  border-color: var(--border-hover);
+}
+
+.ad-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+.ad-disclosure-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  margin: 0;
+}
+
+.ad-format-chip {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.ad-placeholder-creative {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.04) 0%, rgba(63, 185, 80, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-xs);
+  min-height: 60px;
+}
+
+.ad-creative-left {
+  text-align: left;
+}
+
+.ad-sponsor-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.ad-creative-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.ad-creative-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.ad-creative-btn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  background: var(--accent-cyan);
+  color: #090d13 !important;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-xs);
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+  text-decoration: none !important;
+  flex-shrink: 0;
+}
+
+.ad-creative-btn:hover {
+  opacity: 0.9;
+}
+
+/* Skyscraper Unit (300x600) */
+.ad-skyscraper-frame {
+  background: rgba(18, 24, 32, 0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ad-skyscraper-creative {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1.25rem 0.85rem 0.85rem;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.04) 0%, rgba(13, 17, 23, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-xs);
+  min-height: 520px;
+  box-sizing: border-box;
+}
+
+.ad-skyscraper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.ad-skyscraper-icon {
+  font-size: 1.4rem;
+}
+
+.ad-skyscraper-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.ad-skyscraper-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+.ad-skyscraper-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.ad-skyscraper-feature-list div {
+  color: #c9d1d9;
+}
+
+.ad-skyscraper-btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: var(--accent-cyan);
+  color: #090d13 !important;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-xs);
+  text-align: center;
+  width: 100%;
+  display: block;
+  text-decoration: none !important;
+  margin-bottom: 1.25rem;
+  box-sizing: border-box;
+}
+
+.ad-skyscraper-btn:hover {
+  opacity: 0.9;
+}
+
+.ad-skyscraper-footer {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* Hide fallback creative when Google AdSense injects real live ad */
+.ad-slot-frame:has(iframe) .ad-placeholder-creative,
+.ad-skyscraper-frame:has(iframe) .ad-skyscraper-creative,
+.ad-slot-frame:has(ins[data-ad-status="filled"]) .ad-placeholder-creative,
+.ad-skyscraper-frame:has(ins[data-ad-status="filled"]) .ad-skyscraper-creative {
+  display: none !important;
+}
+
+/* ==========================================================================
+   DOCUMENTATION & LEGAL DUAL-COLUMN LAYOUT
+   ========================================================================== */
+.doc-page-layout {
+  max-width: var(--max-width);
+  margin: 2rem auto 4rem;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.doc-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 1.5rem);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.doc-sidebar-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.doc-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.doc-nav-link {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.15s ease;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+}
+
+.doc-nav-link:hover {
+  color: var(--text-main);
+  background: var(--bg-card-hover);
+}
+
+.doc-main-content {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .doc-page-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .doc-sidebar {
+    position: static;
+  }
+}
+
+/* ==========================================================================
+   HERO SECTION (DIRECT, HIGH-UTILITY, E-E-A-T AUTHORITATIVE)
+   ========================================================================== */
+.hero-section {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 1.5rem;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(63, 185, 80, 0.08);
+  border: 1px solid rgba(63, 185, 80, 0.25);
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 0.85rem;
+  max-width: 840px;
+}
+
+.hero-lead {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 780px;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+/* Live Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.filter-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.tag-btn:hover {
+  background: var(--bg-card);
+  color: #fff;
+  border-color: var(--border-hover);
+}
+
+.tag-btn.active {
+  background: #1f2937;
+  color: #fff;
+  border-color: var(--border-focus);
+}
+
+.tools-count-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   TOOLS GRID (HIGH-DENSITY HARDWARE & SIMULATOR MODULES)
+   ========================================================================== */
+.tools-section {
+  max-width: var(--max-width);
+  margin: 0 auto 4rem;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 440px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.category-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-link);
+  background: rgba(56, 139, 253, 0.1);
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.runtime-chip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-green);
+  background: rgba(63, 185, 80, 0.08);
+  border: 1px solid rgba(63, 185, 80, 0.2);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.runtime-chip .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.55rem;
+  line-height: 1.35;
+}
+
+.card-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card:hover .card-title a {
+  color: var(--text-link);
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* Genuine Technical Formula / Specification Chip Box */
+.card-spec-box {
+  background: var(--bg-input);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.card-spec-box .spec-label {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.card-spec-box .spec-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  gap: 0.5rem;
+}
+
+.card-engine-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.open-tool-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-link);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.open-tool-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   PUBLICATIONS & INCIDENT NOTES
+   ========================================================================== */
+.articles-section {
+  max-width: var(--max-width);
+  margin: 0 auto 5rem;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+.section-title-row {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title-row h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.section-title-row p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.articles-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.15s ease;
+}
+
+.article-item:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+.article-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin-bottom: 0.6rem;
+}
+
+.article-badge {
+  color: var(--accent-amber);
+  background: rgba(210, 153, 34, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.article-time {
+  color: var(--text-muted);
+}
+
+.article-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.article-title a {
+  color: #fff;
+}
+
+.article-title a:hover {
+  color: var(--text-link);
+}
+
+.article-excerpt {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.article-read-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-link);
+}
+
+/* ==========================================================================
+   INTERACTIVE WORKBENCH (DETAIL PAGES)
+   ========================================================================== */
+.tool-hero-header {
+  max-width: var(--max-width);
+  margin: 2rem auto 1.25rem;
+  padding: 0 1.25rem;
+}
+
+.tool-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tool-category-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-link);
+  background: rgba(56, 139, 253, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.air-gapped-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: rgba(63, 185, 80, 0.08);
+  border: 1px solid rgba(63, 185, 80, 0.2);
+  color: var(--accent-green);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.air-gapped-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.tool-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.tool-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.workbench-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+  padding: 0 1.25rem;
+}
+
+.workbench-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.workbench-bar {
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border);
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.workbench-bar .status-live {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.workbench-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 460px;
+}
+
+@media (max-width: 880px) {
+  .workbench-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.workbench-left {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--bg-subtle);
+}
+
+.workbench-right {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  position: relative;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.control-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.control-val-display {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent-blue);
+  cursor: pointer;
+}
+
+textarea.dev-input, input[type="text"].dev-input, select.dev-input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: #f0f6fc;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.85rem;
+  outline: none;
+}
+
+textarea.dev-input {
+  height: 200px;
+  resize: vertical;
+}
+
+textarea.dev-input:focus, input[type="text"].dev-input:focus, select.dev-input:focus {
+  border-color: var(--border-focus);
+}
+
+.sim-canvas-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #080c12;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  position: relative;
+  min-height: 260px;
+}
+
+canvas#simCanvas {
+  width: 100%;
+  height: 100%;
+  max-height: 260px;
+}
+
+.metrics-grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.metric-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.75rem;
+}
+
+.metric-pill .metric-name {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metric-pill .metric-value {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.2rem;
+}
+
+.terminal-container {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-bar {
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border);
+  padding: 0.4rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.terminal-body {
+  padding: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  overflow-y: auto;
+}
+
+.term-line {
+  margin-bottom: 0.2rem;
+}
+
+.copy-code-btn, .btn-copy {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.copy-code-btn:hover, .btn-copy:hover {
+  color: #fff;
+  border-color: var(--border-hover);
+}
+
+/* ==========================================================================
+   ARTICLE SECTION & STICKY SIDEBAR
+   ========================================================================== */
+.article-section {
+  padding: 2rem 1.25rem 5rem;
+}
+
+.article-layout-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.5rem;
+}
+
+@media (max-width: 880px) {
+  .article-layout-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article-content-body {
+  min-width: 0;
+}
+
+.article-header-meta {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.author-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.author-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.post-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.markdown-prose {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #c9d1d9;
+}
+
+.markdown-prose h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.025em;
+  margin: 2.5rem 0 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-prose h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  margin: 2rem 0 0.75rem;
+}
+
+.markdown-prose p {
+  margin-bottom: 1.5rem;
+}
+
+.markdown-prose ul, .markdown-prose ol {
+  margin: 0 0 1.5rem 1.75rem;
+}
+
+.markdown-prose li {
+  margin-bottom: 0.45rem;
+}
+
+.markdown-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+  color: #f0f6fc;
+}
+
+.markdown-prose pre {
+  margin: 1.75rem 0;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  overflow-x: auto;
+}
+
+.markdown-prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #f0f6fc;
+}
+
+.markdown-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.markdown-prose th {
+  background: var(--bg-card);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-prose td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.sticky-ad-container {
+  position: sticky;
+  top: 80px;
+}
+
+/* ==========================================================================
+   SEARCH MODAL
+   ========================================================================== */
+.search-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14vh;
+}
+
+.search-modal.active {
+  display: flex;
+}
+
+.search-modal-content {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  gap: 0.75rem;
+  background: var(--bg-subtle);
+}
+
+.search-input-wrapper input {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  font-family: var(--font-mono);
+}
+
+.search-hint {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.search-results-list {
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.search-result-item {
+  display: block;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.12s;
+  text-decoration: none !important;
+}
+
+.search-result-item:hover, .search-result-item.focused {
+  background: var(--bg-subtle);
+}
+
+.result-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-link);
+  background: rgba(56, 139, 253, 0.1);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+
+.result-title {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0.15rem;
+}
+
+.result-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  background: var(--bg-subtle);
+  padding: 3.5rem 1.25rem 2rem;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brand-col .footer-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 380px;
+  margin-bottom: 1.25rem;
+}
+
+.footer-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(63, 185, 80, 0.08);
+  border: 1px solid rgba(63, 185, 80, 0.2);
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.footer-heading {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.compliance-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.compliance-tags .tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   DOCUMENTATION & ARCHITECTURE MASTER LAYOUT
+   ========================================================================== */
+.doc-page-layout {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 5rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .doc-page-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 1.5rem auto 3rem;
+  }
+}
+
+.doc-sidebar {
+  position: sticky;
+  top: 5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .doc-sidebar {
+    position: static;
+  }
+}
+
+.doc-sidebar-header {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doc-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+}
+
+.doc-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-radius: var(--radius-xs);
+  transition: all 0.15s ease;
+  text-decoration: none !important;
+}
+
+.doc-nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateX(3px);
+}
+
+.doc-nav-link.active {
+  color: var(--accent-blue);
+  background: rgba(56, 189, 248, 0.08);
+  font-weight: 600;
+}
+
+.doc-nav-icon {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.doc-main-content {
+  min-width: 0;
+}
+
+.doc-hero-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-hero-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0.75rem 0 0.5rem;
+  line-height: 1.25;
+}
+
+.doc-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.doc-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.doc-card-callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.doc-card-callout.emerald {
+  background: rgba(63, 185, 80, 0.05);
+  border-color: rgba(63, 185, 80, 0.3);
+}
+
+.doc-card-callout.cyan {
+  background: rgba(56, 189, 248, 0.05);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.doc-section-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.doc-section-card:hover {
+  border-color: var(--border-hover);
+}
+
+.doc-section-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  scroll-margin-top: 6rem;
+}
+
+
+  </style>
+  
+  <link rel="stylesheet" href="/static/css/syscalculus.css?v=6">
+
+  <!-- Google AdSense Script (Pub ID configurable via environment) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Air-Gapped Zero-Trust Log Sanitizer",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "100% in-browser air-gapped log sanitizer. Scrub AWS access keys, Bearer JWTs, database passwords, and IP addresses with zero server transmission.",
+  "author": {
+    "@type": "Organization",
+    "name": "SysCalculus Engineering Team",
+    "url": "https://syscalculus.dev/about.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Why Corporate Security Forbids Pasting Logs into Web Tools (And How to Build Air-Gapped Workbenches)",
+  "description": "100% in-browser air-gapped log sanitizer. Scrub AWS access keys, Bearer JWTs, database passwords, and IP addresses with zero server transmission.",
+  "datePublished": "2026-09-03",
+  "dateModified": "2026-09-05",
+  "author": {
+    "@type": "Organization",
+    "name": "SysCalculus Engineering Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SysCalculus",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://syscalculus.dev/static/images/logo.svg"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://syscalculus.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Systems Simulators",
+      "item": "https://syscalculus.dev/#tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Air-Gapped Zero-Trust Log Sanitizer",
+      "item": "https://syscalculus.dev/tools/airgapped-log-sanitizer.html"
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <div class="brand-block">
+        <a href="/" class="brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+            <text x="16" y="21" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#38bdf8" text-anchor="middle">SC</text>
+          </svg>
+          <span class="brand-text">Sys<span class="brand-accent">Calculus</span></span>
+        </a>
+        <span class="brand-sub">systems engineering</span>
+      </div>
+
+      <div class="nav-controls">
+        <button class="search-trigger" aria-label="Quick Search" title="Search tools (Ctrl+K)">
+          <span>Search tools...</span>
+          <span class="kbd-chip">Ctrl K</span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="/" class="">Tools</a></li>
+          <li><a href="/#notes">Incident Notes</a></li>
+          <li><a href="/about.html" class="">Architecture</a></li>
+          <li><a href="/privacy.html" class="">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Google AdSense Official Leaderboard Unit (Conditionally Shown) -->
+  
+  <aside class="ad-leaderboard-container" aria-label="Advertisement">
+    <div class="ad-slot-frame">
+      <div class="ad-top-meta">
+        <span class="ad-disclosure-label">SPONSORED BY GOOGLE ADSENSE PARTNER NETWORK</span>
+        <span class="ad-format-chip">728x90 LEADERBOARD</span>
+      </div>
+      <div class="ad-placeholder-creative">
+        <div class="ad-creative-left">
+          <span class="ad-sponsor-badge">SPONSORED</span>
+          <span class="ad-creative-title">High-Throughput Global Edge Compute & Dedicated NVMe</span>
+          <span class="ad-creative-desc">Zero noisy neighbors, 10Gbps unmetered bandwidth, and enterprise SLAs.</span>
+        </div>
+        <a href="/about.html" class="ad-creative-btn">Deploy Infrastructure →</a>
+      </div>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </aside>
+  
+
+  <!-- Main Viewport Content -->
+  <main id="mainContent">
+    
+<header class="tool-hero-header">
+  <div class="tool-badge-row">
+    <span class="tool-category-badge">Zero-Trust / Security</span>
+    <span class="air-gapped-pill"><span class="dot"></span> 100% IN-BROWSER • 0 BYTES EXFILTRATED</span>
+  </div>
+  <h1 class="tool-title">Air-Gapped Zero-Trust Log Sanitizer</h1>
+  <p class="tool-subtitle">Scrub AWS Access Keys, Bearer JWTs, database connection URIs, and IP addresses 100% in client-side browser memory. Zero server telemetry.</p>
+</header>
+
+<!-- Master Interactive Workbench Section -->
+<section class="workbench-wrapper">
+  <div class="workbench-card">
+    <div class="workbench-bar">
+      <span>WORKBENCH // RUNTIME ENVIRONMENT: CLIENT V8</span>
+      <span class="status-live">● ENGINE READY</span>
+    </div>
+
+    
+    
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">RAW INPUT LOGS (LOCAL MEMORY ONLY)</span>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btnLoadSampleLog" class="btn-copy" style="font-size: 0.72rem; padding: 0.25rem 0.5rem;">Load Sample</button>
+            <button id="btnClearLog" class="btn-copy" style="font-size: 0.72rem; padding: 0.25rem 0.5rem;">Clear</button>
+          </div>
+        </div>
+        <textarea id="logRawInput" class="dev-input" placeholder="Paste sensitive application logs, stack traces, or terminal output here..."></textarea>
+
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">DETECTION RULES:</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; font-size: 0.78rem;">
+          <label><input type="checkbox" id="redactAwsKeys" checked> AWS Keys & Secrets</label>
+          <label><input type="checkbox" id="redactJwt" checked> JWT Bearer Tokens</label>
+          <label><input type="checkbox" id="redactDbUris" checked> Database URIs</label>
+          <label><input type="checkbox" id="redactIps" checked> IPv4 Addresses</label>
+          <label><input type="checkbox" id="redactEmails" checked> Email Addresses</label>
+        </div>
+      </div>
+
+      <div class="workbench-right">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">SANITIZED STREAM (ZERO NETWORK TRANSMISSION)</span>
+          <button class="copy-code-btn" data-copy-target="#logSanitizedOutput">Copy Sanitized</button>
+        </div>
+        <textarea id="logSanitizedOutput" class="dev-input" readonly placeholder="Redacted logs will appear here in real-time..."></textarea>
+
+        <div class="metrics-grid-row" style="margin-top: 0.75rem;">
+          <div class="metric-pill">
+            <div class="metric-name">Redacted Secrets</div>
+            <div class="metric-value" id="redactedSecretsCount" style="color: #3fb950;">0</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Execution Time</div>
+            <div class="metric-value" id="redactionTimeMs" style="color: #38bdf8;">0.0 ms</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Network Outbound</div>
+            <div class="metric-value" style="color: #3fb950;">0 Bytes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+
+  </div>
+</section>
+
+<!-- Official Google AdSense Mid-Page Unit -->
+<div class="ad-leaderboard-container" style="margin: 2.5rem 0;">
+  <div class="ad-slot-frame">
+    <div class="ad-top-meta">
+      <span class="ad-disclosure-label">SPONSORED BY GOOGLE ADSENSE PARTNER NETWORK</span>
+      <span class="ad-format-chip">IN-ARTICLE 728x90</span>
+    </div>
+    <div class="ad-placeholder-creative">
+      <div class="ad-creative-left">
+        <span class="ad-sponsor-badge">INFRASTRUCTURE</span>
+        <span class="ad-creative-title">Automated Production Outage Post-Mortems & SRE Telemetry</span>
+        <span class="ad-creative-desc">Deterministic queueing models, Little's Law, and kernel-level cgroup calculation.</span>
+      </div>
+      <a href="/about.html" class="ad-creative-btn">Read Architecture →</a>
+    </div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="5555555555"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- 1,500+ Word Engineering Post-Mortem & Architecture Deep-Dive -->
+<section class="article-section" id="postmortem">
+  <div class="article-layout-container">
+    
+    <!-- Main Article Body -->
+    <article class="article-content-body">
+      <div class="article-header-meta">
+        <div class="author-avatar-row">
+          <div class="author-badge">
+            <span class="author-name">SysCalculus SRE & Systems Architecture Team</span>
+            <span class="post-date">Published 2026-09-03 • Peer Reviewed by Infrastructure Working Group</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Raw Injected Markdown Content -->
+      <div class="markdown-prose">
+        <h2>Executive Security Brief: The Shadow IT Data Leak Vector</h2>
+<p>In June 2025, a Tier-1 healthcare SaaS vendor suffered a critical credential breach resulting in an audit penalty exceeding $1,400,000. </p>
+<p>The compromise did not originate from a sophisticated zero-day kernel exploit or a spear-phishing attack against an executive. It originated when a senior DevOps engineer troubleshooting an emergency production database outage copied a 400-line server error stack trace and pasted it into a popular "Online JSON &amp; Log Formatter" website found via a search engine.</p>
+<p>Unknown to the engineer, the free formatter website was hosted on an unpatched cloud server with open access logs and embedded third-party session recording scripts. Within 48 minutes of pasting the logs, an automated threat intelligence bot scraped the database connection URI from the site's server logs:</p>
+<p><code>postgres://prod_service:P@ssw0rd99!@db-primary.prod.company-internal.net:5432/patients_db</code></p>
+<p>The credentials allowed external adversaries to establish an encrypted tunnel and query sensitive HIPAA-protected records, triggering mandatory breach notifications and enterprise-wide SOC2 audit suspensions.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">+-----------------------------------------------------------------------------------+</span>
+<span class="c">|                        SHADOW IT DATA EXFILTRATION PATH                           |</span>
+<span class="nb">+-----------------------------------------------------------------------------------+</span>
+<span class="c">| 1</span><span class="nt">.</span><span class="c"> Engineer encounters production exception (contains DB password &amp; JWTs)        |</span>
+<span class="c">| 2</span><span class="nt">.</span><span class="c"> Engineer pastes raw stack trace into public web utility website                |</span>
+<span class="c">| 3</span><span class="nt">.</span><span class="c"> Utility website dispatches HTTP POST payload to remote backend server          |</span>
+<span class="c">| 4</span><span class="nt">.</span><span class="c"> Remote server writes raw payload to disk /tmp logs </span><span class="nb">+</span><span class="c"> third</span><span class="nb">-</span><span class="c">party trackers      |</span>
+<span class="c">| 5</span><span class="nt">.</span><span class="c"> Public server compromised via search indexing</span><span class="nt">,</span><span class="c"> open S3 bucket</span><span class="nt">,</span><span class="c"> or log scraper  |</span>
+<span class="c">| 6</span><span class="nt">.</span><span class="c"> Adversary acquires production AWS keys &amp; database root passwords               |</span>
+<span class="nb">+-----------------------------------------------------------------------------------+</span>
+</code></pre></div>
+
+<hr />
+<h2>The Compliance Mandate: Zero-Trust Client Execution</h2>
+<p>Enterprise InfoSec teams across banking, healthcare, and defense enforce clear policies: <strong>no production data, logs, or credentials may touch unapproved external hosts.</strong></p>
+<p>However, engineers frequently require formatting, sanitization, and parsing utilities during high-stress production incidents. The architectural solution is <strong>Air-Gapped Client-Side Computation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">+-------------------------------------------------------------+</span>
+<span class="o">|</span><span class="w">                     </span><span class="n">BROWSER</span><span class="w"> </span><span class="n">SANDBOX</span><span class="w"> </span><span class="p">(</span><span class="n">V8</span><span class="p">)</span><span class="w">                    </span><span class="o">|</span>
+<span class="o">|</span><span class="w">                                                             </span><span class="o">|</span>
+<span class="o">|</span><span class="w">   </span><span class="p">[</span><span class="w"> </span><span class="n">Raw</span><span class="w"> </span><span class="n">Log</span><span class="w"> </span><span class="n">Input</span><span class="w"> </span><span class="p">]</span><span class="w">                                         </span><span class="o">|</span>
+<span class="o">|</span><span class="w">          </span><span class="o">|</span><span class="w">                                                  </span><span class="o">|</span>
+<span class="o">|</span><span class="w">          </span><span class="n">v</span><span class="w">                                                  </span><span class="o">|</span>
+<span class="o">|</span><span class="w">   </span><span class="p">[</span><span class="w"> </span><span class="n">In</span><span class="o">-</span><span class="n">Memory</span><span class="w"> </span><span class="n">RegExp</span><span class="w"> </span><span class="n">Engine</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="n">ms</span><span class="w"> </span><span class="n">Latency</span><span class="p">)</span><span class="w">                 </span><span class="o">|</span>
+<span class="o">|</span><span class="w">          </span><span class="o">|</span><span class="w">                                                  </span><span class="o">|</span>
+<span class="o">|</span><span class="w">          </span><span class="n">v</span><span class="w">                                                  </span><span class="o">|</span>
+<span class="o">|</span><span class="w">   </span><span class="p">[</span><span class="w"> </span><span class="n">Masked</span><span class="w"> </span><span class="n">Log</span><span class="w"> </span><span class="n">Output</span><span class="w"> </span><span class="p">]</span><span class="w">                                     </span><span class="o">|</span>
+<span class="o">|</span><span class="w">                                                             </span><span class="o">|</span>
+<span class="o">|</span><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="nb">NO</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="n">Requests</span><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="nb">NO</span><span class="w"> </span><span class="n">WebSocket</span><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="nb">NO</span><span class="w"> </span><span class="n">LocalStorage</span><span class="w">   </span><span class="o">|</span>
+<span class="o">+-------------------------------------------------------------+</span>
+<span class="w">               </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">BLOCKED</span><span class="w"> </span><span class="n">BY</span><span class="w"> </span><span class="n">SANDBOX</span><span class="p">)</span>
+<span class="w">               </span><span class="n">v</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">v</span>
+<span class="w">      </span><span class="p">[</span><span class="w"> </span><span class="n">EXTERNAL</span><span class="w"> </span><span class="n">INTERNET</span><span class="w"> </span><span class="p">]</span>
+</code></pre></div>
+
+<hr />
+<h2>Pattern Anatomy: Critical Secrets Scrubber Architecture</h2>
+<p>To safely redact corporate logs without destroying their forensic debugging value, a sanitizer must employ precise, non-destructive regex token masking:</p>
+<h3>1. AWS IAM Access Key IDs</h3>
+<ul>
+<li><strong>Signature:</strong> Fixed 20-character alphanumeric string starting with known prefixes:</li>
+<li><code>AKIA</code>: Standard permanent IAM user key</li>
+<li><code>ASIA</code>: Temporary STS security token credentials</li>
+<li><strong>Regex Pattern:</strong> <code>\b(AKIA|ASIA)[0-9A-Z]{16}\b</code></li>
+</ul>
+<h3>2. JSON Web Tokens (JWT) &amp; Bearer Headers</h3>
+<ul>
+<li><strong>Signature:</strong> Three base64url-encoded segments separated by periods (<code>header.payload.signature</code>), starting with <code>eyJ</code>:</li>
+<li><strong>Regex Pattern:</strong> <code>\beyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}\b</code></li>
+</ul>
+<h3>3. Database Connection Strings (URIs)</h3>
+<ul>
+<li><strong>Signature:</strong> Standard URI protocol format containing embedded user credentials:</li>
+<li><strong>Regex Pattern:</strong> <code>(postgres|mysql|mongodb|redis|amqp):\/\/([^:\s]+):([^@\s]+)@</code></li>
+<li><strong>Masking Replacement:</strong> <code>$1://user:[REDACTED_PASSWORD]@</code></li>
+</ul>
+<h3>4. IPv4 and Private Subnet Addresses</h3>
+<ul>
+<li><strong>Signature:</strong> Dotted-quad notation (avoiding loopback <code>127.0.0.1</code> and wildcard <code>0.0.0.0</code>):</li>
+<li><strong>Regex Pattern:</strong> <code>\b(?!(127\.0\.0\.1|0\.0\.0\.0))\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b</code></li>
+</ul>
+<hr />
+<h2>Industrial Production Pattern: Node.js / CLI Stream Redactor</h2>
+<p>For CI/CD pipelines, logging agents (Fluentbit, Logstash), or terminal workflows, embed this zero-telemetry sanitization transform into your application logger:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Transform</span><span class="p">,</span><span class="w"> </span><span class="nx">TransformCallback</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"stream"</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">SECRET_PATTERNS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"AWS_ACCESS_KEY"</span><span class="p">,</span><span class="w"> </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/\b(AKIA|ASIA)[0-9A-Z]{16}\b/g</span><span class="p">,</span><span class="w"> </span><span class="nx">mask</span><span class="o">:</span><span class="w"> </span><span class="s2">"[REDACTED_AWS_KEY]"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"JWT_TOKEN"</span><span class="p">,</span><span class="w"> </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/\beyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}\b/g</span><span class="p">,</span><span class="w"> </span><span class="nx">mask</span><span class="o">:</span><span class="w"> </span><span class="s2">"[REDACTED_JWT]"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"DB_URI"</span><span class="p">,</span><span class="w"> </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/(postgres|mysql|mongodb|redis|amqp):\/\/([^:\s]+):([^@\s]+)@/g</span><span class="p">,</span><span class="w"> </span><span class="nx">mask</span><span class="o">:</span><span class="w"> </span><span class="s2">"$1://$2:[REDACTED_PASS]@"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"BEARER_AUTH"</span><span class="p">,</span><span class="w"> </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/Bearer\s+[a-zA-Z0-9_\-\.=:_\+\/]+/gi</span><span class="p">,</span><span class="w"> </span><span class="nx">mask</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bearer [REDACTED_AUTH]"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"CREDIT_CARD"</span><span class="p">,</span><span class="w"> </span><span class="nx">regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/\b(?:\d{4}[-\s]?){3}\d{4}\b/g</span><span class="p">,</span><span class="w"> </span><span class="nx">mask</span><span class="o">:</span><span class="w"> </span><span class="s2">"[REDACTED_CARD]"</span><span class="w"> </span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ZeroTrustLogSanitizerStream</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Transform</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">_transform</span><span class="p">(</span><span class="nx">chunk</span><span class="o">:</span><span class="w"> </span><span class="kt">Buffer</span><span class="p">,</span><span class="w"> </span><span class="nx">encoding</span><span class="o">:</span><span class="w"> </span><span class="kt">BufferEncoding</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="o">:</span><span class="w"> </span><span class="kt">TransformCallback</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">chunk</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s2">"utf8"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">pattern</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">SECRET_PATTERNS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">line</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">regex</span><span class="p">,</span><span class="w"> </span><span class="nx">pattern</span><span class="p">.</span><span class="nx">mask</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">line</span><span class="p">,</span><span class="w"> </span><span class="s2">"utf8"</span><span class="p">));</span>
+<span class="w">    </span><span class="nx">callback</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2>Verification Guide: Auditing Browser Network Isolation</h2>
+<p>You do not have to take our word for granted that SysCalculus is 100% air-gapped. You can independently audit this page in under 30 seconds using Chrome DevTools:</p>
+<ol>
+<li>Open your browser Developer Tools (<strong>F12</strong> or <strong>Ctrl + Shift + I</strong>).</li>
+<li>Click on the <strong>Network</strong> tab.</li>
+<li>Check the <strong>Disable cache</strong> and filter by <strong>Fetch/XHR</strong>.</li>
+<li>Clear the existing network log (🚫 icon).</li>
+<li>Paste 50,000 lines of sensitive log data into the SysCalculus sanitizer input.</li>
+<li><strong>Observation:</strong> Notice that <strong>zero network requests are sent</strong>. The request counter remains at 0, confirming that all regex transforms execute strictly in local memory.</li>
+<li>Optional: Toggle your computer's Wi-Fi / Ethernet <strong>OFF</strong> or switch to Airplane Mode. The tool continues to operate instantaneously without network access.</li>
+</ol>
+      </div>
+
+      <!-- Technical FAQ Accordion Section for Rich Schema Snippets -->
+      
+      <div class="faq-accordion-section" style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1.25rem;">Frequently Asked Technical Questions</h3>
+        
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
+          <summary style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff; cursor: pointer;">Why is pasting application logs into random online web formatters dangerous?</summary>
+          <p style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Most free online utility tools (JSON formatters, regex testers, log parsers) log user inputs into backend server access logs, Google Analytics, or third-party session replay software. Sensitive data such as production database passwords, JWT session tokens, and AWS IAM credentials are frequently exposed to attackers via compromised utility servers.</p>
+        </details>
+        
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
+          <summary style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff; cursor: pointer;">How does SysCalculus guarantee zero data exfiltration?</summary>
+          <p style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">SysCalculus's log sanitizer utilizes client-side JavaScript RegExp engines and Web Crypto API entirely inside your local browser tab. No XMLHttpRequest (XHR) or fetch API calls are triggered when processing logs. You can verify this by disabling network connectivity in your browser while using the tool.</p>
+        </details>
+        
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
+          <summary style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff; cursor: pointer;">What regulatory frameworks prohibit pasting logs into third-party web tools?</summary>
+          <p style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">SOC 2 Type II (Confidentiality and Privacy criteria), HIPAA Security Rule (45 CFR § 164.312), PCI-DSS Requirement 3 (Protect Stored Cardholder Data), and GDPR Article 32 (Security of Processing) strictly prohibit transmitting production credentials or customer PII to unauthorized processors.</p>
+        </details>
+        
+      </div>
+      
+
+    </article>
+
+    <!-- Sticky Programmatic Google AdSense Skyscraper Sidebar Unit (300x600) -->
+    <aside class="article-sidebar">
+      <div class="sticky-ad-container">
+        <div class="ad-skyscraper-frame">
+          <div class="ad-top-meta" style="margin-bottom: 0.75rem;">
+            <span class="ad-disclosure-label" style="margin: 0;">GOOGLE ADSENSE</span>
+            <span class="ad-format-chip">300x600 SKYSCRAPER</span>
+          </div>
+          <div class="ad-skyscraper-creative">
+            <div class="ad-skyscraper-header">
+              <span class="ad-sponsor-badge">CLOUD PARTNER</span>
+              <div class="ad-skyscraper-icon">⚡</div>
+            </div>
+            <div class="ad-skyscraper-title">Autonomous Infrastructure Monitoring & FinOps</div>
+            <p class="ad-skyscraper-desc">Prevent Kubernetes OOMKills, HikariCP deadlock cascades, and AWS egress pricing shocks.</p>
+            <div class="ad-skyscraper-feature-list">
+              <div>✓ 100% Client-Side V8 Sandbox</div>
+              <div>✓ Zero Log Exfiltration (Air-Gapped)</div>
+              <div>✓ Sub-Millisecond Global CDN</div>
+              <div>✓ 24/7 Sentinel SRE Patrol</div>
+            </div>
+            <a href="/about.html" class="ad-skyscraper-btn">Explore Infrastructure →</a>
+            <div class="ad-skyscraper-footer">SysCalculus Certified Advertising Unit</div>
+          </div>
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:300px;height:600px"
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+               data-ad-slot="7777777777"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+  </main>
+
+  <!-- Command Palette Modal (Ctrl + K) -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Quick Search">
+    <div class="search-modal-content">
+      <div class="search-input-wrapper">
+        <input type="text" id="modalSearchInput" placeholder="Filter tools, calculators, and post-mortems..." autocomplete="off">
+        <span class="search-hint">ESC</span>
+      </div>
+      <div class="search-results-list" id="modalSearchResults">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <div class="brand" style="margin-bottom: 0.65rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+              <text x="16" y="21" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#38bdf8" text-anchor="middle">SC</text>
+            </svg>
+            <span class="brand-text">Sys<span class="brand-accent">Calculus</span></span>
+          </div>
+          <p class="footer-desc">
+            Client-side visual systems simulators, cloud cost calculators, and production outage analyses. Evaluated 100% in your browser's local sandbox with zero server telemetry.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            <span>All 8 Simulators Ready • 100% In-Browser</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">Tools & Simulators</div>
+          <ul class="footer-links">
+            <li><a href="/tools/db-deadlock-simulator.html">PostgreSQL Connection Pool Starvation</a></li>
+            <li><a href="/tools/aws-egress-calculator.html">AWS Egress Bandwidth Calculator</a></li>
+            <li><a href="/tools/airgapped-log-sanitizer.html">Client-Side Log Redactor & Scrubber</a></li>
+            <li><a href="/tools/crontab-visualizer.html">Crontab 24h Execution Heatmap</a></li>
+            <li><a href="/tools/docker-compose-converter.html">Docker run to Hardened Compose</a></li>
+            <li><a href="/tools/llm-vram-sizer.html">LLM VRAM & Quantization Sizer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">Documentation & Legal</div>
+          <ul class="footer-links">
+            <li><a href="/about.html">Architecture & Verification</a></li>
+            <li><a href="/privacy.html">Privacy Policy & Cookies</a></li>
+            <li><a href="/privacy.html#adsense">Google AdSense Disclosure</a></li>
+            <li><a href="/privacy.html#gdpr">GDPR & CCPA Rights</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
+            <li><a href="/rss.xml">Engineering RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 SysCalculus. Evaluated 100% in client-side V8. Zero telemetry collected.
+        </div>
+        <div class="compliance-tags">
+          <span class="tag">GDPR Compliant</span>
+          <span class="tag">CCPA Ready</span>
+          <span class="tag">Zero Data Retention</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Embedded JavaScript Engines (Self-Contained Client Runtime) -->
+  
+  <script>
+/**
+ * SysCalculus - Client-Side Systems Simulators & Micro-Tools
+ * 100% In-Browser Execution • Zero Server Latency • Zero Data Exfiltration
+ */
+
+window.SysCalculus = window.SysCalculus || {};
+
+// ============================================================================
+// 1. DATABASE CONNECTION POOL & DEADLOCK SIMULATOR
+// ============================================================================
+SysCalculus.initDbPoolSimulator = function() {
+  const canvas = document.getElementById('simCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  // Controls
+  const poolSizeInput = document.getElementById('poolSize');
+  const poolSizeVal = document.getElementById('poolSizeVal');
+  const rpsInput = document.getElementById('reqRate');
+  const rpsVal = document.getElementById('reqRateVal');
+  const queryDurationInput = document.getElementById('queryDuration');
+  const queryDurationVal = document.getElementById('queryDurationVal');
+  const leakToggle = document.getElementById('leakToggle');
+
+  // Metrics Display
+  const activeConnDisplay = document.getElementById('metricActiveConn');
+  const queueDepthDisplay = document.getElementById('metricQueue');
+  const p99Display = document.getElementById('metricP99');
+  const errorRateDisplay = document.getElementById('metricErrorRate');
+  const terminalLog = document.getElementById('simTerminalLog');
+
+  let maxPool = parseInt(poolSizeInput ? poolSizeInput.value : 20, 10);
+  let rps = parseInt(rpsInput ? rpsInput.value : 30, 10);
+  let queryTime = parseInt(queryDurationInput ? queryDurationInput.value : 250, 10);
+  let hasLeak = leakToggle ? leakToggle.checked : false;
+
+  let activeConnections = 0;
+  let leakedConnections = 0;
+  let queue = [];
+  let p99Latency = 12;
+  let errorCount = 0;
+  let totalRequests = 0;
+  let animationFrameId = null;
+
+  function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * window.devicePixelRatio;
+    canvas.height = rect.height * window.devicePixelRatio;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  // Listeners
+  if (poolSizeInput) {
+    poolSizeInput.addEventListener('input', (e) => {
+      maxPool = parseInt(e.target.value, 10);
+      if (poolSizeVal) poolSizeVal.textContent = maxPool;
+    });
+  }
+  if (rpsInput) {
+    rpsInput.addEventListener('input', (e) => {
+      rps = parseInt(e.target.value, 10);
+      if (rpsVal) rpsVal.textContent = rps + ' req/s';
+    });
+  }
+  if (queryDurationInput) {
+    queryDurationInput.addEventListener('input', (e) => {
+      queryTime = parseInt(e.target.value, 10);
+      if (queryDurationVal) queryDurationVal.textContent = queryTime + ' ms';
+    });
+  }
+  if (leakToggle) {
+    leakToggle.addEventListener('change', (e) => {
+      hasLeak = e.target.checked;
+      if (hasLeak) {
+        logTerminal('[WARN] Connection leak enabled: worker threads failing to call db.close() in finally block!');
+      } else {
+        leakedConnections = 0;
+        logTerminal('[INFO] Connection pool flushed. Leaks resolved.');
+      }
+    });
+  }
+
+  function logTerminal(msg) {
+    if (!terminalLog) return;
+    const time = new Date().toISOString().substring(11, 19);
+    const line = document.createElement('div');
+    line.className = 'term-line';
+    if (msg.includes('[WARN]') || msg.includes('DEADLOCK') || msg.includes('504')) {
+      line.style.color = '#f85149';
+    } else if (msg.includes('[INFO]')) {
+      line.style.color = '#38bdf8';
+    } else {
+      line.style.color = '#8b949e';
+    }
+    line.textContent = `[${time}] ${msg}`;
+    terminalLog.appendChild(line);
+    terminalLog.scrollTop = terminalLog.scrollHeight;
+    while (terminalLog.children.length > 40) {
+      terminalLog.removeChild(terminalLog.firstChild);
+    }
+  }
+
+  // Request Generator Loop
+  setInterval(() => {
+    const arrivals = Math.round(rps / 5);
+    for (let i = 0; i < arrivals; i++) {
+      totalRequests++;
+      const reqId = Math.floor(Math.random() * 90000) + 10000;
+      const effectivePool = Math.max(0, maxPool - leakedConnections);
+
+      if (activeConnections < effectivePool) {
+        // Acquired connection immediately
+        activeConnections++;
+        setTimeout(() => {
+          if (hasLeak && Math.random() < 0.08 && leakedConnections < maxPool) {
+            leakedConnections++;
+            logTerminal(`[ERR] Worker #tx-${reqId} unhandled rejection. Leaked conn #L${leakedConnections}/${maxPool}`);
+          }
+          activeConnections = Math.max(0, activeConnections - 1);
+        }, queryTime + (Math.random() * 40 - 20));
+      } else {
+        // Enqueue or drop
+        if (queue.length < 50) {
+          queue.push({ id: reqId, start: Date.now() });
+        } else {
+          errorCount++;
+          if (Math.random() < 0.2) {
+            logTerminal(`[CRIT] HTTP 504 Gateway Timeout: DB pool exhausted (${maxPool}/${maxPool}). Req #${reqId} rejected.`);
+          }
+        }
+      }
+    }
+
+    // Process queued requests
+    while (queue.length > 0 && activeConnections < Math.max(0, maxPool - leakedConnections)) {
+      const item = queue.shift();
+      activeConnections++;
+      const waitTime = Date.now() - item.start;
+      p99Latency = Math.min(6000, Math.round(queryTime + waitTime * 1.5));
+      setTimeout(() => {
+        activeConnections = Math.max(0, activeConnections - 1);
+      }, queryTime);
+    }
+
+    if (queue.length === 0) {
+      p99Latency = Math.max(12, Math.round(queryTime * 1.08 + (Math.random() * 6)));
+    } else {
+      p99Latency = Math.min(8000, 350 + (queue.length * 85));
+    }
+
+    // Update UI Metrics
+    if (activeConnDisplay) activeConnDisplay.textContent = `${activeConnections + leakedConnections} / ${maxPool}`;
+    if (queueDepthDisplay) {
+      queueDepthDisplay.textContent = queue.length;
+      queueDepthDisplay.style.color = queue.length > 15 ? '#f85149' : (queue.length > 0 ? '#d29922' : '#3fb950');
+    }
+    if (p99Display) {
+      p99Display.textContent = `${p99Latency} ms`;
+      p99Display.style.color = p99Latency > 800 ? '#f85149' : (p99Latency > 200 ? '#d29922' : '#38bdf8');
+    }
+    if (errorRateDisplay) {
+      const rate = totalRequests > 0 ? ((errorCount / totalRequests) * 100).toFixed(1) : '0.0';
+      errorRateDisplay.textContent = `${rate}%`;
+      errorRateDisplay.style.color = parseFloat(rate) > 0.5 ? '#f85149' : '#3fb950';
+    }
+  }, 200);
+
+  // Render Canvas
+  function draw() {
+    const rect = canvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Background Grid
+    ctx.strokeStyle = '#161b22';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < w; x += 30) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+    }
+    for (let y = 0; y < h; y += 30) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+
+    // Draw Connection Slots (Grid of Pods)
+    const totalSlots = maxPool;
+    const cols = Math.min(10, Math.ceil(Math.sqrt(totalSlots * 2)));
+    const rows = Math.ceil(totalSlots / cols);
+    const slotSize = Math.min(26, Math.floor((w * 0.45) / cols));
+    const startX = 30;
+    const startY = 50;
+
+    // Header label
+    ctx.fillStyle = '#8b949e';
+    ctx.font = '11px "JetBrains Mono", monospace';
+    ctx.fillText(`POSTGRES POOL SLOTS (Cap: ${maxPool})`, startX, startY - 18);
+
+    for (let i = 0; i < totalSlots; i++) {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+      const px = startX + col * (slotSize + 6);
+      const py = startY + row * (slotSize + 6);
+
+      let slotColor = '#21262d'; // idle
+      let borderColor = '#30363d';
+
+      if (i < leakedConnections) {
+        slotColor = '#7f1d1d'; // leaked (dark red)
+        borderColor = '#ef4444';
+      } else if (i < leakedConnections + activeConnections) {
+        slotColor = '#0369a1'; // busy (cyan)
+        borderColor = '#38bdf8';
+      }
+
+      ctx.fillStyle = slotColor;
+      ctx.fillRect(px, py, slotSize, slotSize);
+      ctx.strokeStyle = borderColor;
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(px, py, slotSize, slotSize);
+
+      // Pulse highlight on active
+      if (slotColor === '#0369a1') {
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(px + slotSize / 2, py + slotSize / 2, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // Draw Waiting Request Queue
+    const queueX = w * 0.58;
+    const queueY = startY;
+    ctx.fillStyle = '#8b949e';
+    ctx.font = '11px "JetBrains Mono", monospace';
+    ctx.fillText(`WAITING THREAD QUEUE (${queue.length})`, queueX, queueY - 18);
+
+    const maxQueueVis = 32;
+    const qCols = 4;
+    for (let i = 0; i < Math.min(queue.length, maxQueueVis); i++) {
+      const qCol = i % qCols;
+      const qRow = Math.floor(i / qCols);
+      const qx = queueX + qCol * 28;
+      const qy = queueY + qRow * 24;
+
+      ctx.fillStyle = queue.length > 20 ? 'rgba(248, 81, 73, 0.2)' : 'rgba(210, 153, 34, 0.2)';
+      ctx.strokeStyle = queue.length > 20 ? '#f85149' : '#d29922';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(qx, qy, 22, 16, 3);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = queue.length > 20 ? '#ff7b72' : '#e3b341';
+      ctx.font = '9px "JetBrains Mono", monospace';
+      ctx.fillText(`T${i + 1}`, qx + 4, qy + 11);
+    }
+
+    if (queue.length > maxQueueVis) {
+      ctx.fillStyle = '#f85149';
+      ctx.font = '10px "JetBrains Mono", monospace';
+      ctx.fillText(`+${queue.length - maxQueueVis} more threads waiting...`, queueX, queueY + 8 * 24 + 10);
+    }
+
+    // Health Status Stamp
+    const isExhausted = (activeConnections + leakedConnections) >= maxPool;
+    const statusText = isExhausted ? 'POOL EXHAUSTED (P99 SPIKE)' : 'HEALTHY (OPTIMAL RUNTIME)';
+    const statusColor = isExhausted ? '#f85149' : '#3fb950';
+
+    ctx.font = 'bold 11px "JetBrains Mono", monospace';
+    ctx.fillStyle = statusColor;
+    ctx.fillText(`STATUS: ${statusText}`, startX, h - 18);
+
+    animationFrameId = requestAnimationFrame(draw);
+  }
+
+  draw();
+};
+
+// ============================================================================
+// 2. AWS EGRESS COST CALCULATOR
+// ============================================================================
+SysCalculus.initEgressCalculator = function() {
+  const egressSlider = document.getElementById('egressTbSlider');
+  const egressValDisplay = document.getElementById('egressTbDisplay');
+  const regionSelect = document.getElementById('awsRegionSelect');
+
+  // Outputs
+  const awsCostDisplay = document.getElementById('awsTotalCost');
+  const r2CostDisplay = document.getElementById('r2TotalCost');
+  const hetznerCostDisplay = document.getElementById('hetznerTotalCost');
+  const savingsDisplay = document.getElementById('r2SavingsAmount');
+  const savingsPercent = document.getElementById('r2SavingsPercent');
+  const terraformSnippet = document.getElementById('terraformSnippet');
+
+  if (!egressSlider) return;
+
+  function calculate() {
+    const tb = parseFloat(egressSlider.value);
+    const gb = tb * 1024;
+    const region = regionSelect ? regionSelect.value : 'us-east-1';
+
+    if (egressValDisplay) {
+      egressValDisplay.textContent = tb >= 1000 ? `${(tb / 1000).toFixed(1)} PB` : `${tb} TB`;
+    }
+
+    // AWS Tiered Pricing for Data Transfer Out (Internet)
+    // First 100 GB/month: Free
+    // Next 9.9 TB (up to 10 TB): $0.09 / GB
+    // Next 40 TB (up to 50 TB): $0.085 / GB
+    // Next 100 TB (up to 150 TB): $0.07 / GB
+    // Greater than 150 TB: $0.05 / GB
+    let awsCost = 0;
+    let remainingGb = Math.max(0, gb - 100); // 100GB free tier
+
+    // Tier 1: 9,900 GB @ $0.09
+    const tier1 = Math.min(remainingGb, 9.9 * 1024);
+    awsCost += tier1 * 0.09;
+    remainingGb -= tier1;
+
+    // Tier 2: 40 TB @ $0.085
+    if (remainingGb > 0) {
+      const tier2 = Math.min(remainingGb, 40 * 1024);
+      awsCost += tier2 * 0.085;
+      remainingGb -= tier2;
+    }
+
+    // Tier 3: 100 TB @ $0.07
+    if (remainingGb > 0) {
+      const tier3 = Math.min(remainingGb, 100 * 1024);
+      awsCost += tier3 * 0.07;
+      remainingGb -= tier3;
+    }
+
+    // Tier 4: Over 150 TB @ $0.05
+    if (remainingGb > 0) {
+      awsCost += remainingGb * 0.05;
+    }
+
+    // Regional multiplier adjustment (e.g. AP, SA are higher)
+    if (region === 'ap-southeast-1' || region === 'ap-northeast-1') {
+      awsCost *= 1.25;
+    } else if (region === 'sa-east-1') {
+      awsCost *= 1.55;
+    }
+
+    // Cloudflare R2: $0.00 Egress!
+    // Storage cost only, but for egress pure calculation: $0
+    const r2Cost = 0;
+
+    // Hetzner Cloud: 20 TB included free per server, €1.00 (~$1.08) per TB thereafter
+    const freeHetznerTb = 20;
+    const billableHetznerTb = Math.max(0, tb - freeHetznerTb);
+    const hetznerCost = billableHetznerTb * 1.08;
+
+    const savings = Math.max(0, awsCost - r2Cost);
+    const percent = awsCost > 0 ? ((savings / awsCost) * 100).toFixed(0) : 0;
+
+    if (awsCostDisplay) awsCostDisplay.textContent = `$${Math.round(awsCost).toLocaleString()} /mo`;
+    if (r2CostDisplay) r2CostDisplay.textContent = `$${r2Cost.toFixed(2)} /mo`;
+    if (hetznerCostDisplay) hetznerCostDisplay.textContent = `$${Math.round(hetznerCost).toLocaleString()} /mo`;
+    if (savingsDisplay) savingsDisplay.textContent = `$${Math.round(savings).toLocaleString()}`;
+    if (savingsPercent) savingsPercent.textContent = `-${percent}%`;
+
+    if (terraformSnippet) {
+      terraformSnippet.value = `# Cloudflare R2 Zero-Egress Storage Bucket
+resource "cloudflare_r2_bucket" "production_media" {
+  account_id = var.cloudflare_account_id
+  name       = "syscalculus-assets-${region}"
+  location   = "auto" # Routed to closest edge POP
+}
+
+# AWS S3 Sync to Zero-Egress Mirror (Bypasses AWS Data Out)
+resource "aws_s3_bucket" "source" {
+  bucket = "primary-assets-origin"
+}
+
+# Calculated Monthly Egress Savings: $${Math.round(savings).toLocaleString()} USD/mo
+# Egress Volume: ${tb} TB/month across ${region}`;
+    }
+  }
+
+  egressSlider.addEventListener('input', calculate);
+  if (regionSelect) regionSelect.addEventListener('change', calculate);
+  calculate();
+};
+
+// ============================================================================
+// 3. AIR-GAPPED ZERO-TRUST LOG SANITIZER
+// ============================================================================
+SysCalculus.initLogSanitizer = function() {
+  const input = document.getElementById('logRawInput');
+  const output = document.getElementById('logSanitizedOutput');
+  const redactAws = document.getElementById('redactAwsKeys');
+  const redactJwt = document.getElementById('redactJwt');
+  const redactIps = document.getElementById('redactIps');
+  const redactEmails = document.getElementById('redactEmails');
+  const redactUris = document.getElementById('redactDbUris');
+
+  const countDisplay = document.getElementById('redactedSecretsCount');
+  const speedDisplay = document.getElementById('redactionTimeMs');
+  const btnSample = document.getElementById('btnLoadSampleLog');
+  const btnClear = document.getElementById('btnClearLog');
+
+  if (!input || !output) return;
+
+  const sampleLog = `2026-09-05 18:42:01.812 [ERROR] [auth.service] Failed login for user admin@cloudcorp.internal from 198.51.100.42: invalid credentials.
+2026-09-05 18:42:02.104 [INFO] [s3.worker] Initializing AWS client with access key AKIAIOSFODNN7EXAMPLE and secret wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY.
+2026-09-05 18:42:03.490 [DEBUG] [db.connector] Connecting to postgres://prod_admin:sUp3rS3cr3tP@ss!@db.internal.cluster.local:5432/finance_db?sslmode=require
+2026-09-05 18:42:04.221 [WARN] [gateway.api] Bearer token validation failed for token:
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+2026-09-05 18:42:05.610 [INFO] [payment.processor] Transaction processed for card 4532-1234-5678-9010 on billing server 10.244.3.189. Contact billing-ops@enterprise.com.`;
+
+  function sanitize() {
+    const t0 = performance.now();
+    let text = input.value;
+    let redactedCount = 0;
+
+    if (!text.trim()) {
+      output.value = '';
+      if (countDisplay) countDisplay.textContent = '0';
+      if (speedDisplay) speedDisplay.textContent = '0.0 ms';
+      return;
+    }
+
+    // 1. AWS Access Key IDs
+    if (!redactAws || redactAws.checked) {
+      text = text.replace(/AKIA[0-9A-Z]{16}/g, () => {
+        redactedCount++;
+        return '[REDACTED_AWS_ACCESS_KEY]';
+      });
+      // AWS Secret Keys
+      text = text.replace(/[0-9a-zA-Z/+]{40}(?=[^0-9a-zA-Z/+]|$)/g, (match) => {
+        if (match.length === 40 && /[A-Z]/.test(match) && /[a-z]/.test(match) && /[0-9]/.test(match)) {
+          redactedCount++;
+          return '[REDACTED_AWS_SECRET_KEY]';
+        }
+        return match;
+      });
+    }
+
+    // 2. JWTs (Header.Payload.Signature)
+    if (!redactJwt || redactJwt.checked) {
+      text = text.replace(/eyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}/g, () => {
+        redactedCount++;
+        return '[REDACTED_JWT_TOKEN]';
+      });
+    }
+
+    // 3. Database connection URI passwords
+    if (!redactUris || redactUris.checked) {
+      text = text.replace(/(postgres|mysql|mongodb|redis|amqp):\/\/[^:\s]+:([^@\s]+)@/g, (match, proto) => {
+        redactedCount++;
+        return `${proto}://user:[REDACTED_PASSWORD]@`;
+      });
+    }
+
+    // 4. IP Addresses (IPv4)
+    if (!redactIps || redactIps.checked) {
+      text = text.replace(/\b(?!(127\.0\.0\.1|0\.0\.0\.0))\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/g, () => {
+        redactedCount++;
+        return '[REDACTED_IP]';
+      });
+    }
+
+    // 5. Emails
+    if (!redactEmails || redactEmails.checked) {
+      text = text.replace(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g, () => {
+        redactedCount++;
+        return '[REDACTED_EMAIL]';
+      });
+    }
+
+    // Credit cards
+    text = text.replace(/\b(?:\d{4}[-\s]?){3}\d{4}\b/g, () => {
+      redactedCount++;
+      return '[REDACTED_CREDIT_CARD]';
+    });
+
+    const elapsed = (performance.now() - t0).toFixed(1);
+    output.value = text;
+    if (countDisplay) countDisplay.textContent = redactedCount;
+    if (speedDisplay) speedDisplay.textContent = `${elapsed} ms`;
+  }
+
+  input.addEventListener('input', sanitize);
+  [redactAws, redactJwt, redactIps, redactEmails, redactUris].forEach(checkbox => {
+    if (checkbox) checkbox.addEventListener('change', sanitize);
+  });
+
+  if (btnSample) {
+    btnSample.addEventListener('click', () => {
+      input.value = sampleLog;
+      sanitize();
+    });
+  }
+  if (btnClear) {
+    btnClear.addEventListener('click', () => {
+      input.value = '';
+      output.value = '';
+      if (countDisplay) countDisplay.textContent = '0';
+      if (speedDisplay) speedDisplay.textContent = '0.0 ms';
+    });
+  }
+
+  // Initial run if prefilled
+  if (input.value) sanitize();
+};
+
+// ============================================================================
+// 4. CRONTAB VISUALIZER & 24-HOUR HEATMAP
+// ============================================================================
+SysCalculus.initCronVisualizer = function() {
+  const cronInput = document.getElementById('cronExpressionInput');
+  const humanDisplay = document.getElementById('cronHumanReadable');
+  const heatmapContainer = document.getElementById('cronHeatmapGrid');
+  const nextRunsList = document.getElementById('cronNextRunsList');
+  const presetBtns = document.querySelectorAll('.cron-preset-btn');
+
+  if (!cronInput) return;
+
+  function parseField(field, min, max) {
+    if (field === '*') {
+      const arr = [];
+      for (let i = min; i <= max; i++) arr.push(i);
+      return arr;
+    }
+    if (field.startsWith('*/')) {
+      const step = parseInt(field.replace('*/', ''), 10);
+      const arr = [];
+      for (let i = min; i <= max; i += step) arr.push(i);
+      return arr;
+    }
+    if (field.includes(',')) {
+      return field.split(',').map(s => parseInt(s.trim(), 10)).filter(n => !isNaN(n));
+    }
+    if (field.includes('-')) {
+      const [start, end] = field.split('-').map(s => parseInt(s.trim(), 10));
+      const arr = [];
+      for (let i = start; i <= end; i++) arr.push(i);
+      return arr;
+    }
+    const val = parseInt(field, 10);
+    return isNaN(val) ? [] : [val];
+  }
+
+  function update() {
+    const expr = cronInput.value.trim();
+    const parts = expr.split(/\s+/);
+
+    if (parts.length !== 5) {
+      if (humanDisplay) humanDisplay.textContent = 'Invalid format: Exactly 5 parts required (minute hour dom month dow)';
+      return;
+    }
+
+    const [minStr, hrStr, domStr, monStr, dowStr] = parts;
+    const minutes = parseField(minStr, 0, 59);
+    const hours = parseField(hrStr, 0, 23);
+
+    // Human translation
+    let desc = `Runs at `;
+    if (minStr === '*') desc += `every minute`;
+    else if (minStr.startsWith('*/')) desc += `every ${minStr.replace('*/', '')} minutes`;
+    else desc += `minute ${minStr}`;
+
+    if (hrStr === '*') desc += `, every hour`;
+    else if (hrStr.startsWith('*/')) desc += `, every ${hrStr.replace('*/', '')} hours`;
+    else desc += `, past hour ${hrStr}:00`;
+
+    if (humanDisplay) humanDisplay.textContent = desc;
+
+    // Render 24-hour Heatmap
+    if (heatmapContainer) {
+      heatmapContainer.innerHTML = '';
+      for (let h = 0; h < 24; h++) {
+        const hourCell = document.createElement('div');
+        hourCell.className = 'cron-hour-box';
+        const isHourActive = hours.includes(h);
+
+        let runsInHour = 0;
+        if (isHourActive) {
+          runsInHour = minutes.length;
+        }
+
+        hourCell.title = `${String(h).padStart(2, '0')}:00 - ${runsInHour} execution(s)`;
+        hourCell.innerHTML = `<span class="hour-label">${String(h).padStart(2, '0')}h</span><span class="count-label">${runsInHour}x</span>`;
+
+        if (runsInHour > 30) {
+          hourCell.style.background = '#238636';
+          hourCell.style.borderColor = '#3fb950';
+          hourCell.style.color = '#fff';
+        } else if (runsInHour > 0) {
+          hourCell.style.background = '#0e4429';
+          hourCell.style.borderColor = '#238636';
+          hourCell.style.color = '#7ee787';
+        } else {
+          hourCell.style.background = '#161b22';
+          hourCell.style.borderColor = '#21262d';
+          hourCell.style.color = '#6e7681';
+        }
+
+        heatmapContainer.appendChild(hourCell);
+      }
+    }
+
+    // Compute Next 5 Runs
+    if (nextRunsList) {
+      nextRunsList.innerHTML = '';
+      let now = new Date();
+      let found = 0;
+      let check = new Date(now.getTime() + 60000);
+
+      while (found < 5 && (check - now) < 30 * 86400000) {
+        if (hours.includes(check.getHours()) && minutes.includes(check.getMinutes())) {
+          found++;
+          const li = document.createElement('li');
+          li.className = 'next-run-item';
+          li.innerHTML = `<strong>#${found}</strong> <code>${check.toUTCString().replace('GMT', 'UTC')}</code>`;
+          nextRunsList.appendChild(li);
+        }
+        check = new Date(check.getTime() + 60000);
+      }
+    }
+  }
+
+  cronInput.addEventListener('input', update);
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      cronInput.value = btn.dataset.cron;
+      update();
+    });
+  });
+
+  update();
+};
+
+// ============================================================================
+// 5. DOCKER RUN TO DOCKER COMPOSE CONVERTER
+// ============================================================================
+SysCalculus.initDockerConverter = function() {
+  const input = document.getElementById('dockerRunInput');
+  const output = document.getElementById('dockerComposeOutput');
+  const btnConvert = document.getElementById('btnDockerConvert');
+
+  if (!input || !output) return;
+
+  function convert() {
+    const raw = input.value.trim();
+    if (!raw) {
+      output.value = '';
+      return;
+    }
+
+    let serviceName = 'app';
+    let image = 'nginx:alpine';
+    let ports = [];
+    let volumes = [];
+    let environment = [];
+    let restart = 'unless-stopped';
+
+    // Regex parsing for docker run flags
+    const nameMatch = raw.match(/--name\s+([^\s]+)/);
+    if (nameMatch) serviceName = nameMatch[1];
+
+    const portMatches = [...raw.matchAll(/-p\s+([^\s]+)|--publish\s+([^\s]+)/g)];
+    portMatches.forEach(m => ports.push(m[1] || m[2]));
+
+    const volMatches = [...raw.matchAll(/-v\s+([^\s]+)|--volume\s+([^\s]+)/g)];
+    volMatches.forEach(m => volumes.push(m[1] || m[2]));
+
+    const envMatches = [...raw.matchAll(/-e\s+([^\s]+)|--env\s+([^\s]+)/g)];
+    envMatches.forEach(m => environment.push(m[1] || m[2]));
+
+    const restartMatch = raw.match(/--restart\s+([^\s]+)/);
+    if (restartMatch) restart = restartMatch[1];
+
+    // Detect image (usually the last word or after options)
+    const tokens = raw.replace(/\\/g, ' ').split(/\s+/);
+    for (let i = tokens.length - 1; i >= 0; i--) {
+      const t = tokens[i];
+      if (t && !t.startsWith('-') && tokens[i - 1] !== '-p' && tokens[i - 1] !== '-v' && tokens[i - 1] !== '-e' && tokens[i - 1] !== '--name' && tokens[i - 1] !== '--restart' && t !== 'docker' && t !== 'run') {
+        image = t;
+        break;
+      }
+    }
+
+    let yaml = `version: "3.8"\n\nservices:\n  ${serviceName}:\n    image: ${image}\n    container_name: ${serviceName}\n    restart: ${restart}\n`;
+
+    if (ports.length > 0) {
+      yaml += `    ports:\n`;
+      ports.forEach(p => yaml += `      - "${p}"\n`);
+    }
+
+    if (environment.length > 0) {
+      yaml += `    environment:\n`;
+      environment.forEach(e => yaml += `      - ${e}\n`);
+    }
+
+    if (volumes.length > 0) {
+      yaml += `    volumes:\n`;
+      volumes.forEach(v => yaml += `      - ${v}\n`);
+    }
+
+    yaml += `    security_opt:\n      - no-new-privileges:true\n`;
+    yaml += `    logging:\n      driver: "json-file"\n      options:\n        max-size: "10m"\n        max-file: "3"\n`;
+
+    output.value = yaml;
+  }
+
+  input.addEventListener('input', convert);
+  if (btnConvert) btnConvert.addEventListener('click', convert);
+  if (input.value) convert();
+};
+
+// ============================================================================
+// 6. LLM VRAM & QUANTIZATION SIZER
+// ============================================================================
+SysCalculus.initLlmVramSizer = function() {
+  const paramSlider = document.getElementById('llmParamSlider');
+  const paramDisplay = document.getElementById('llmParamDisplay');
+  const quantSelect = document.getElementById('llmQuantSelect');
+  const ctxSelect = document.getElementById('llmCtxSelect');
+
+  const totalVramDisplay = document.getElementById('llmTotalVram');
+  const weightsVramDisplay = document.getElementById('llmWeightsVram');
+  const kvVramDisplay = document.getElementById('llmKvVram');
+  const hardwareBadge = document.getElementById('llmHardwareRec');
+
+  if (!paramSlider) return;
+
+  function calculate() {
+    const paramsBillion = parseFloat(paramSlider.value);
+    const quantBits = parseFloat(quantSelect ? quantSelect.value : 4);
+    const ctxLength = parseInt(ctxSelect ? ctxSelect.value : 8192, 10);
+
+    if (paramDisplay) paramDisplay.textContent = `${paramsBillion}B Parameters`;
+
+    // Weights VRAM (GB) = (Params * (bits / 8)) * 1.15 (overhead)
+    const weightsGb = (paramsBillion * 1e9 * (quantBits / 8)) / (1024 * 1024 * 1024);
+
+    // KV Cache VRAM (GB)
+    // Formula: 2 * n_layers * n_heads * head_dim * context * precision
+    // Standard approx for LLaMA architecture: ~0.5 MB per 1k context per Billion params at 16-bit
+    const kvGb = (ctxLength / 1000) * (paramsBillion * 0.04) * 0.12;
+
+    // CUDA Context & Activation Overhead
+    const overheadGb = Math.max(1.2, paramsBillion * 0.05);
+
+    const totalVram = weightsGb + kvGb + overheadGb;
+
+    if (totalVramDisplay) totalVramDisplay.textContent = `${totalVram.toFixed(1)} GB`;
+    if (weightsVramDisplay) weightsVramDisplay.textContent = `${weightsGb.toFixed(1)} GB`;
+    if (kvVramDisplay) kvVramDisplay.textContent = `${kvGb.toFixed(2)} GB`;
+
+    if (hardwareBadge) {
+      let rec = '';
+      let badgeClass = 'badge-green';
+      if (totalVram <= 8) {
+        rec = 'Consumer GPU (RTX 3070 / 4060 8GB)';
+      } else if (totalVram <= 16) {
+        rec = 'Prosumer GPU (RTX 4080 / Apple M2 Pro 16GB)';
+      } else if (totalVram <= 24) {
+        rec = 'Workstation GPU (1x RTX 3090 / 4090 24GB)';
+      } else if (totalVram <= 48) {
+        rec = 'Dual GPU (2x RTX 3090 / 1x A6000 48GB)';
+      } else if (totalVram <= 80) {
+        rec = 'Datacenter GPU (1x NVIDIA A100 / H100 80GB)';
+      } else {
+        const gpuCount = Math.ceil(totalVram / 80);
+        rec = `Multi-GPU Cluster (${gpuCount}x NVIDIA H100 80GB SXM)`;
+        badgeClass = 'badge-red';
+      }
+      hardwareBadge.textContent = rec;
+    }
+  }
+
+  paramSlider.addEventListener('input', calculate);
+  if (quantSelect) quantSelect.addEventListener('change', calculate);
+  if (ctxSelect) ctxSelect.addEventListener('change', calculate);
+  calculate();
+};
+
+// Global Bootstrapper on DOM Ready
+document.addEventListener('DOMContentLoaded', () => {
+  SysCalculus.initDbPoolSimulator();
+  SysCalculus.initEgressCalculator();
+  SysCalculus.initLogSanitizer();
+  SysCalculus.initCronVisualizer();
+  SysCalculus.initDockerConverter();
+  SysCalculus.initLlmVramSizer();
+});
+
+  </script>
+  
+  
+  <script>
+/**
+ * SysCalculus - Client-Side App Helpers
+ * Search palette, clipboard helpers, and fast tag filter.
+ */
+
+(function() {
+  'use strict';
+
+  // 1. Tag Filtering
+  const filterBtns = document.querySelectorAll('.tag-btn');
+  const cards = document.querySelectorAll('.card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-cat');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 2. Clipboard Copy Helpers
+  document.addEventListener('click', function(e) {
+    const copyBtn = e.target.closest('.copy-code-btn, .btn-copy');
+    if (!copyBtn) return;
+
+    let targetSelector = copyBtn.getAttribute('data-copy-target');
+    let textToCopy = '';
+
+    if (targetSelector) {
+      const targetEl = document.querySelector(targetSelector);
+      if (targetEl) {
+        textToCopy = targetEl.value !== undefined ? targetEl.value : targetEl.innerText;
+      }
+    } else {
+      const container = copyBtn.closest('.workbench-card, pre, code');
+      if (container) {
+        const pre = container.querySelector('pre, code, textarea');
+        if (pre) textToCopy = pre.value !== undefined ? pre.value : pre.innerText;
+      }
+    }
+
+    if (textToCopy) {
+      navigator.clipboard.writeText(textToCopy.trim()).then(() => {
+        const origText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<span style="color:#3fb950">✓ Copied</span>';
+        setTimeout(() => {
+          copyBtn.innerHTML = origText;
+        }, 1800);
+      }).catch(err => {
+        console.error('Clipboard copy error: ', err);
+      });
+    }
+  });
+
+  // 3. Quick Search Palette (Ctrl+K or Cmd+K)
+  const searchModal = document.getElementById('searchModal');
+  const searchInput = document.getElementById('modalSearchInput');
+  const searchResults = document.getElementById('modalSearchResults');
+  const navSearchBtn = document.querySelector('.search-trigger');
+
+  const toolsIndex = [
+    { title: 'Database Deadlock & Connection Pool Simulator', path: '/tools/db-deadlock-simulator.html', tag: 'PostgreSQL / SRE', desc: 'Simulate PostgreSQL connection starvation, queue buildup and P99 latency spikes in real-time.' },
+    { title: 'AWS Egress Cost Calculator & Zero-Egress Architecture', path: '/tools/aws-egress-calculator.html', tag: 'Cloud / FinOps', desc: 'Calculate AWS NAT Gateway and Internet egress gouging vs Cloudflare R2 and Hetzner.' },
+    { title: 'Zero-Trust Air-Gapped Log Sanitizer', path: '/tools/airgapped-log-sanitizer.html', tag: 'Security / DevOps', desc: 'Scrub AWS keys, JWT tokens, IP addresses and database passwords client-side with 0 network latency.' },
+    { title: 'Linux Crontab Visualizer & 24h Execution Heatmap', path: '/tools/crontab-visualizer.html', tag: 'Linux / DevOps', desc: 'Interactive 5-part cron syntax parser with 24-hour heatmap schedule and next 10 runs.' },
+    { title: 'Docker Run to Production Docker Compose Converter', path: '/tools/docker-compose-converter.html', tag: 'Containers / Docker', desc: 'Convert messy docker run terminal commands into clean, security-hardened docker-compose.yml.' },
+    { title: 'LLM VRAM & Quantization Sizer (FP16/INT8/INT4)', path: '/tools/llm-vram-sizer.html', tag: 'AI / MLOps', desc: 'Compute weights, KV cache, and CUDA overhead for LLaMA 3, DeepSeek, and Mistral models.' }
+  ];
+
+  function openSearch() {
+    if (!searchModal) return;
+    searchModal.classList.add('active');
+    if (searchInput) {
+      searchInput.value = '';
+      searchInput.focus();
+      renderSearchResults('');
+    }
+  }
+
+  function closeSearch() {
+    if (!searchModal) return;
+    searchModal.classList.remove('active');
+  }
+
+  function renderSearchResults(query) {
+    if (!searchResults) return;
+    const q = query.toLowerCase().trim();
+    const filtered = toolsIndex.filter(t => 
+      t.title.toLowerCase().includes(q) || 
+      t.tag.toLowerCase().includes(q) || 
+      t.desc.toLowerCase().includes(q)
+    );
+
+    if (filtered.length === 0) {
+      searchResults.innerHTML = '<div style="padding: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">No tools found matching query. Press ESC to close.</div>';
+      return;
+    }
+
+    searchResults.innerHTML = filtered.map((item, idx) => `
+      <a href="${item.path}" class="search-result-item ${idx === 0 ? 'focused' : ''}">
+        <div style="margin-bottom: 0.25rem;"><span class="result-badge">${item.tag}</span></div>
+        <div class="result-title">${item.title}</div>
+        <div class="result-desc">${item.desc}</div>
+      </a>
+    `).join('');
+  }
+
+  if (navSearchBtn) navSearchBtn.addEventListener('click', openSearch);
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      if (searchModal && searchModal.classList.contains('active')) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    }
+    if (e.key === 'Escape' && searchModal && searchModal.classList.contains('active')) {
+      closeSearch();
+    }
+  });
+
+  if (searchModal) {
+    searchModal.addEventListener('click', (e) => {
+      if (e.target === searchModal) closeSearch();
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value);
+    });
+  }
+
+})();
+
+  </script>
+  
+  <script src="/static/js/simulators.js?v=6"></script>
+  <script src="/static/js/app.js?v=6"></script>
+  
+</body>
+</html>

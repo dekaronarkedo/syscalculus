@@ -1,0 +1,9 @@
+# Cloudflare Pages 301 Permanent Redirects (Preserves 100% Google PageRank & Backlinks)
+/tools/db-deadlock-simulator          /tools/db-deadlock-simulator.html          301
+/tools/aws-egress-calculator          /tools/aws-egress-calculator.html          301
+/tools/airgapped-log-sanitizer        /tools/airgapped-log-sanitizer.html        301
+/tools/crontab-visualizer             /tools/crontab-visualizer.html             301
+/tools/docker-compose-converter       /tools/docker-compose-converter.html       301
+/tools/llm-vram-sizer                 /tools/llm-vram-sizer.html                 301
+/about                                /about.html                                301
+/privacy                              /privacy.html                              301
