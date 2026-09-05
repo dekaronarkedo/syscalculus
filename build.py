@@ -20,9 +20,12 @@ def build_site():
 
     print("[BUILD] Initializing SysCalculus Production Compiler...")
 
-    # Clean & recreate dist
+    # Ensure dist exists without crashing on Windows file locks
     if os.path.exists(dist_dir):
-        shutil.rmtree(dist_dir)
+        try:
+            shutil.rmtree(dist_dir)
+        except Exception:
+            pass
     os.makedirs(dist_dir, exist_ok=True)
     os.makedirs(os.path.join(dist_dir, "tools"), exist_ok=True)
 
@@ -116,7 +119,7 @@ def build_site():
     # 6. Copy Static Assets (CSS, JS, Images)
     dist_static = os.path.join(dist_dir, "static")
     if os.path.exists(static_dir):
-        shutil.copytree(static_dir, dist_static)
+        shutil.copytree(static_dir, dist_static, dirs_exist_ok=True)
         print("[BUILD] Copied static assets to dist/static/")
 
     # 6b. Copy Cloudflare Edge Config (_headers, _redirects)
