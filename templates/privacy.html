@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy & Zero-Data Retention Policy | RuntimeZero{% endblock %}
+{% block description %}RuntimeZero Privacy Policy: Full disclosure of client-side air-gapped architecture, Google AdSense cookies, GDPR, and CCPA compliance.{% endblock %}
+{% block canonical %}https://runtimezero.dev/privacy.html{% endblock %}
+{% block nav_privacy %}active{% endblock %}
+
+{% block content %}
+<div class="article-layout-container" style="max-width: 860px; margin: 3rem auto; padding: 0 1.5rem;">
+  <article class="article-content-body" style="width: 100%;">
+    <div class="tool-badge-row">
+      <span class="tool-category-badge">LEGAL COMPLIANCE</span>
+      <span class="air-gapped-pill"><span class="dot"></span> VERIFIED AIR-GAPPED PRIVACY</span>
+    </div>
+
+    <h1 class="tool-title" style="font-size: 2.4rem; margin-bottom: 0.5rem;">Privacy Policy & Cookie Disclosures</h1>
+    <p class="tool-subtitle" style="margin-bottom: 2rem;">Last Updated: September 5, 2026 • RuntimeZero Media & Engineering Architecture</p>
+
+    <div class="markdown-prose">
+      <div style="background: rgba(63, 185, 80, 0.08); border: 1px solid rgba(63, 185, 80, 0.3); border-radius: var(--radius-xs); padding: 1.25rem; margin-bottom: 2rem;">
+        <h3 style="color: #3fb950; margin-top: 0; font-size: 1.1rem;">Zero-Data Retention Architecture Guarantee</h3>
+        <p style="margin: 0; color: #e6edf3; font-size: 0.9rem; line-height: 1.6;">
+          At <strong>RuntimeZero</strong>, we maintain a strict air-gapped client-side execution paradigm. All calculations, connection simulations, log scrubbing, regex processing, and code conversions occur strictly inside your web browser’s JavaScript V8/WASM engine. <strong>No log files, secrets, database credentials, or application telemetry are ever transmitted to our servers or stored on any external medium.</strong>
+        </p>
+      </div>
+
+      <h2 id="adsense">1. Google AdSense & Third-Party Advertising Disclosures</h2>
+      <p>
+        RuntimeZero utilizes Google AdSense and programmatic advertising networks to display commercial advertisements when you visit our website. These third-party vendors may use cookies to serve ads based on your prior visits to RuntimeZero or other websites on the Internet:
+      </p>
+      <ul>
+        <li><strong>Google DoubleClick DART Cookie:</strong> Google, as a third-party vendor, uses cookies to serve advertisements on RuntimeZero. Google’s use of advertising cookies enables it and its partners to serve ads to our users based on their visit to RuntimeZero and/or other sites on the Internet.</li>
+        <li><strong>Opt-Out of DART Cookie:</strong> Users may opt out of personalized advertising by visiting the <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ad Settings</a> page. Alternatively, you can opt out of third-party vendor cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">AboutAds.info Choices</a>.</li>
+        <li>Third-party ad networks or ad servers may automatically receive your IP address when ad units load. Other technologies (such as cookies, JavaScript, or Web Beacons) may also be used by these third-party ad networks to measure the effectiveness of their advertisements and personalize advertising content.</li>
+      </ul>
+
+      <h2 id="gdpr">2. General Data Protection Regulation (GDPR) Rights</h2>
+      <p>
+        If you are a resident of the European Economic Area (EEA), you are granted specific data protection rights under the GDPR. RuntimeZero does not maintain user accounts, does not collect personal identifiers, and does not retain customer databases. However, with respect to analytics and advertising cookies:
+      </p>
+      <ul>
+        <li><strong>Right to Access:</strong> You have the right to request copies of your personal data held by any third-party processor.</li>
+        <li><strong>Right to Rectification:</strong> You have the right to request correction of inaccurate information.</li>
+        <li><strong>Right to Erasure:</strong> You have the right to request erasure of your data under certain conditions.</li>
+        <li><strong>Right to Object:</strong> You have the right to object to our processing of your personal data for advertising purposes.</li>
+      </ul>
+
+      <h2 id="ccpa">3. California Consumer Privacy Act (CCPA)</h2>
+      <p>
+        Under the CCPA, California consumers have the right to request that a business disclose what personal information it collects, uses, and sells.
+      </p>
+      <ul>
+        <li><strong>We Do Not Sell Personal Information:</strong> RuntimeZero does not sell, rent, or trade your personal information to third parties.</li>
+        <li><strong>Consumer Opt-Out:</strong> To exercise your CCPA rights or inquire about advertising identifier opt-outs, please consult our third-party ad settings or contact us directly.</li>
+      </ul>
+
+      <h2>4. Client-Side Cryptographic Log Redaction</h2>
+      <p>
+        Our Air-Gapped Log Sanitizer operates on the browser’s native <code>RegExp</code> and <code>Web Crypto</code> primitives. You can verify this by inspecting the browser Network tab in Developer Tools (F12): when you paste multi-megabyte log files or execute regex operations, zero HTTP POST/GET requests are dispatched.
+      </p>
+
+      <h2>5. Log Files & Standard Web Server Telemetry</h2>
+      <p>
+        Like most web servers, our hosting infrastructure automatically collects non-personally identifiable log information when pages are requested. This includes internet protocol (IP) addresses, browser types, internet service providers (ISPs), referring/exit pages, and date/time stamps. This telemetry is used solely for infrastructure capacity planning, DDoS mitigation, and server performance monitoring.
+      </p>
+
+      <h2>6. Contact & Infrastructure Inquiries</h2>
+      <p>
+        If you have any questions regarding this Privacy Policy or our architectural zero-data retention model, please contact our infrastructure compliance team at: <code>compliance@runtimezero.dev</code>.
+      </p>
+    </div>
+  </article>
+</div>
+{% endblock %}

@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "evt_1788623344320",
+    "timestamp": "2026-09-05T15:49:04.320888",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788623344327",
+    "timestamp": "2026-09-05T15:49:04.327401",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788623761093",
+    "timestamp": "2026-09-05T15:56:01.093904",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788623761100",
+    "timestamp": "2026-09-05T15:56:01.100981",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788623775116",
+    "timestamp": "2026-09-05T15:56:15.116807",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788623775122",
+    "timestamp": "2026-09-05T15:56:15.122808",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788623977963",
+    "timestamp": "2026-09-05T15:59:37.963592",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788623977968",
+    "timestamp": "2026-09-05T15:59:37.968593",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624106088",
+    "timestamp": "2026-09-05T16:01:46.088814",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624106094",
+    "timestamp": "2026-09-05T16:01:46.094815",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624245069",
+    "timestamp": "2026-09-05T16:04:05.069376",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624245075",
+    "timestamp": "2026-09-05T16:04:05.075880",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624422012",
+    "timestamp": "2026-09-05T16:07:02.012756",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624422018",
+    "timestamp": "2026-09-05T16:07:02.018758",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624907006",
+    "timestamp": "2026-09-05T16:15:07.006968",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624907012",
+    "timestamp": "2026-09-05T16:15:07.012970",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624907018",
+    "timestamp": "2026-09-05T16:15:07.018971",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624907024",
+    "timestamp": "2026-09-05T16:15:07.024974",
+    "event_type": "AUTONOMOUS_CYCLE_COMPLETE",
+    "details": {
+      "status": "HEALTHY",
+      "timestamp": 1788624907.019972
+    }
+  },
+  {
+    "id": "evt_1788624908138",
+    "timestamp": "2026-09-05T16:15:08.138774",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624908144",
+    "timestamp": "2026-09-05T16:15:08.144775",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624908150",
+    "timestamp": "2026-09-05T16:15:08.150555",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:08.145775Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: content\\tools\\airgapped-log-sanitizer.md",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788624908267",
+    "timestamp": "2026-09-05T16:15:08.267589",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624908273",
+    "timestamp": "2026-09-05T16:15:08.273590",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624908278",
+    "timestamp": "2026-09-05T16:15:08.278592",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:08.273590Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "Truncated file (<80 bytes): dist\\robots.txt",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788624911642",
+    "timestamp": "2026-09-05T16:15:11.642392",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:11.642392Z",
+      "type": "HTTP_SERVER_DOWN",
+      "reason": "HTTP Probe failed on http://localhost:3000/: HTTP Error 404: File not found",
+      "action_taken": "Restarted ServerController on port 3000"
+    }
+  },
+  {
+    "id": "evt_1788624913776",
+    "timestamp": "2026-09-05T16:15:13.776521",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624913784",
+    "timestamp": "2026-09-05T16:15:13.784524",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624913790",
+    "timestamp": "2026-09-05T16:15:13.790672",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:13.786027Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "Missing critical file: dist\\index.html",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788624918662",
+    "timestamp": "2026-09-05T16:15:18.662107",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:18.662107Z",
+      "type": "HTTP_SERVER_DOWN",
+      "reason": "HTTP Probe failed on http://localhost:3000/: <urlopen error [WinError 10061] Hedef makine etkin olarak reddetti\u011finden ba\u011flant\u0131 kurulamad\u0131>",
+      "action_taken": "Restarted ServerController on port 3000"
+    }
+  },
+  {
+    "id": "evt_1788624948668",
+    "timestamp": "2026-09-05T16:15:48.668787",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624948675",
+    "timestamp": "2026-09-05T16:15:48.675788",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624948682",
+    "timestamp": "2026-09-05T16:15:48.682795",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624948689",
+    "timestamp": "2026-09-05T16:15:48.689021",
+    "event_type": "AUTONOMOUS_CYCLE_COMPLETE",
+    "details": {
+      "status": "HEALTHY",
+      "timestamp": 1788624948.682795
+    }
+  },
+  {
+    "id": "evt_1788624952745",
+    "timestamp": "2026-09-05T16:15:52.745805",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:52.745805Z",
+      "type": "HTTP_SERVER_DOWN",
+      "reason": "HTTP Probe failed on http://localhost:3000/: HTTP Error 404: File not found",
+      "action_taken": "Restarted ServerController on port 3000"
+    }
+  },
+  {
+    "id": "evt_1788624954869",
+    "timestamp": "2026-09-05T16:15:54.869922",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624954878",
+    "timestamp": "2026-09-05T16:15:54.878429",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624954886",
+    "timestamp": "2026-09-05T16:15:54.886933",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:54.880430Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "Missing critical file: dist\\index.html",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788624959724",
+    "timestamp": "2026-09-05T16:15:59.724725",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:15:59.724725Z",
+      "type": "HTTP_SERVER_DOWN",
+      "reason": "HTTP Probe failed on http://localhost:3000/: <urlopen error [WinError 10061] Hedef makine etkin olarak reddetti\u011finden ba\u011flant\u0131 kurulamad\u0131>",
+      "action_taken": "Restarted ServerController on port 3000"
+    }
+  },
+  {
+    "id": "evt_1788624961852",
+    "timestamp": "2026-09-05T16:16:01.852234",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624961860",
+    "timestamp": "2026-09-05T16:16:01.860235",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624961867",
+    "timestamp": "2026-09-05T16:16:01.867908",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:16:01.862236Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "Unrendered Jinja tag in privacy.html: ['{{ CORRUPTED_ANOMALY }}']",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788624969974",
+    "timestamp": "2026-09-05T16:16:09.974283",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624969981",
+    "timestamp": "2026-09-05T16:16:09.981801",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788624969990",
+    "timestamp": "2026-09-05T16:16:09.990320",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788624969996",
+    "timestamp": "2026-09-05T16:16:09.996884",
+    "event_type": "AUTONOMOUS_CYCLE_COMPLETE",
+    "details": {
+      "status": "HEALTHY",
+      "timestamp": 1788624969.9913213
+    }
+  },
+  {
+    "id": "evt_1788624970556",
+    "timestamp": "2026-09-05T16:16:10.556348",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626365176",
+    "timestamp": "2026-09-05T16:39:25.176367",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626365183",
+    "timestamp": "2026-09-05T16:39:25.183385",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626365190",
+    "timestamp": "2026-09-05T16:39:25.190523",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:39:25.186017Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: static\\_headers",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788626384685",
+    "timestamp": "2026-09-05T16:39:44.685628",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626384692",
+    "timestamp": "2026-09-05T16:39:44.692655",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626384700",
+    "timestamp": "2026-09-05T16:39:44.700164",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:39:44.694655Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: static\\_redirects",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788626423287",
+    "timestamp": "2026-09-05T16:40:23.287555",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626423294",
+    "timestamp": "2026-09-05T16:40:23.294609",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626423303",
+    "timestamp": "2026-09-05T16:40:23.303334",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:40:23.298112Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: templates\\base.html",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788626442793",
+    "timestamp": "2026-09-05T16:40:42.793381",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626442799",
+    "timestamp": "2026-09-05T16:40:42.799911",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626442806",
+    "timestamp": "2026-09-05T16:40:42.806936",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:40:42.802414Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: templates\\tool.html",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  },
+  {
+    "id": "evt_1788626714301",
+    "timestamp": "2026-09-05T16:45:14.301831",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 6,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626714308",
+    "timestamp": "2026-09-05T16:45:14.308335",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 6,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626714444",
+    "timestamp": "2026-09-05T16:45:14.444646",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 7,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626714451",
+    "timestamp": "2026-09-05T16:45:14.451158",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 7,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626714466",
+    "timestamp": "2026-09-05T16:45:14.466664",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 7,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626714473",
+    "timestamp": "2026-09-05T16:45:14.473175",
+    "event_type": "AUTONOMOUS_CYCLE_COMPLETE",
+    "details": {
+      "status": "HEALTHY",
+      "tool_generated": "k8s-oom-killer-sizing",
+      "dispatched": 0,
+      "timestamp": 1788626714.4681666
+    }
+  },
+  {
+    "id": "evt_1788626796703",
+    "timestamp": "2026-09-05T16:46:36.703759",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 7,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626796711",
+    "timestamp": "2026-09-05T16:46:36.711263",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 7,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626796851",
+    "timestamp": "2026-09-05T16:46:36.851403",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 8,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626796859",
+    "timestamp": "2026-09-05T16:46:36.859917",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 8,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626796875",
+    "timestamp": "2026-09-05T16:46:36.875933",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 8,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626796883",
+    "timestamp": "2026-09-05T16:46:36.883289",
+    "event_type": "AUTONOMOUS_CYCLE_COMPLETE",
+    "details": {
+      "status": "HEALTHY",
+      "tool_generated": "kafka-consumer-lag-estimator",
+      "dispatched": 0,
+      "timestamp": 1788626796.8779347
+    }
+  },
+  {
+    "id": "evt_1788626797437",
+    "timestamp": "2026-09-05T16:46:37.437335",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 8,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626797561",
+    "timestamp": "2026-09-05T16:46:37.561281",
+    "event_type": "SRE_HEALTH_CHECK",
+    "details": {
+      "status": "HEALTHY",
+      "checks": {
+        "dist_exists": true,
+        "index_exists": true,
+        "privacy_exists": true,
+        "about_exists": true,
+        "sitemap_exists": true,
+        "robots_exists": true,
+        "tools_count": 8,
+        "broken_links": [],
+        "adsense_ready": true
+      }
+    }
+  },
+  {
+    "id": "evt_1788626797570",
+    "timestamp": "2026-09-05T16:46:37.570794",
+    "event_type": "BUILD_COMPLETED",
+    "details": {
+      "tools_compiled": 8,
+      "status": "HEALTHY"
+    }
+  },
+  {
+    "id": "evt_1788626797578",
+    "timestamp": "2026-09-05T16:46:37.578815",
+    "event_type": "SENTINEL_AUTO_HEAL",
+    "details": {
+      "timestamp": "2026-09-05T16:46:37.572795Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: content\\tools\\kafka-consumer-lag-estimator.md",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  }
+]

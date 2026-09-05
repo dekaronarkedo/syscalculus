@@ -1,0 +1,16 @@
+{
+  "sentinel_uptime_seconds": 158,
+  "total_cycles": 9,
+  "anomalies_detected": 1,
+  "auto_heals_executed": 1,
+  "last_status": "100% HEALTHY / OPERATIONAL",
+  "last_cycle_timestamp": "2026-09-05T16:49:14.593177Z",
+  "recent_incidents": [
+    {
+      "timestamp": "2026-09-05T16:46:37.572795Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: content\\tools\\kafka-consumer-lag-estimator.md",
+      "action_taken": "Executed build.build_site() cleanly."
+    }
+  ]
+}

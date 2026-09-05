@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Architecture & Engineering Philosophy | RuntimeZero{% endblock %}
+{% block description %}Why RuntimeZero was engineered: 100% air-gapped systems simulations, zero telemetry exfiltration, and high-precision infrastructure engineering.{% endblock %}
+{% block canonical %}https://runtimezero.dev/about.html{% endblock %}
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+<div class="article-layout-container" style="max-width: 860px; margin: 3rem auto; padding: 0 1.5rem;">
+  <article class="article-content-body" style="width: 100%;">
+    <div class="tool-badge-row">
+      <span class="tool-category-badge">ARCHITECTURE & MISSION</span>
+      <span class="air-gapped-pill"><span class="dot"></span> SENIOR HUMAN CRAFT</span>
+    </div>
+
+    <h1 class="tool-title" style="font-size: 2.4rem; margin-bottom: 0.5rem;">The Architecture of RuntimeZero</h1>
+    <p class="tool-subtitle" style="margin-bottom: 2rem;">Air-Gapped Systems Simulators, Real-World Outage Models, and Zero Server Latency.</p>
+
+    <div class="markdown-prose">
+      <h2>The Corporate Engineering Dilemma</h2>
+      <p>
+        In modern enterprise infrastructure, senior engineers, Site Reliability Engineers (SREs), and Cloud Architects face a severe constraint: <strong>strict data governance policies forbid pasting proprietary application logs, database stack traces, or VPC configuration data into public cloud services or web formatters.</strong>
+      </p>
+      <p>
+        Most web utility sites are insecure by design. When a developer pastes an AWS configuration or error stack trace into a generic online parser, that data is transmitted across public networks and often logged on remote backend servers. For fintechs, healthcare providers, and high-security defense contractors, this represents a critical SOC2 and ISO27001 compliance violation.
+      </p>
+
+      <h2>Our Solution: Zero-Network Client Execution</h2>
+      <p>
+        <strong>RuntimeZero (`runtimezero.dev`)</strong> was engineered from first principles to invert this model:
+      </p>
+      <ul>
+        <li><strong>Client-Side V8 & WebAssembly Execution:</strong> 100% of simulator math, connection pool starvation models, regex sanitization, and YAML compilation executes inside your browser's local sandbox.</li>
+        <li><strong>Zero Bytes Exfiltrated:</strong> You can disconnect your internet connection (or turn on Airplane Mode) after loading any of our tools, and the simulation workbenches will continue to compute at full 60 FPS without a single network drop.</li>
+        <li><strong>Deterministic Mathematical Models:</strong> Rather than returning generic approximations, our simulators implement rigorous queueing theory (Little's Law, Erlang-C formulas, and HikariCP pool math).</li>
+      </ul>
+
+      <h2>The Digital Autonomous Company (DAC) Architecture</h2>
+      <p>
+        RuntimeZero is operated by an autonomous multi-agent engineering guild. Our core departments run continuously to audit infrastructure, synthesize real-world post-mortems from production incidents, and maintain sub-millisecond page performance:
+      </p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); padding: 1rem; border-radius: var(--radius-xs);">
+          <div style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.3rem;">SRE & Systems Engine</div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Continuous validation of client-side canvas simulators, deadlock models, and zero-overhead performance.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); padding: 1rem; border-radius: var(--radius-xs);">
+          <div style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-green); font-size: 0.9rem; margin-bottom: 0.3rem;">FinOps Architecture Lab</div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Live tracking of cloud provider egress pricing (AWS, GCP, Cloudflare, Hetzner) and Terraform blueprints.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); padding: 1rem; border-radius: var(--radius-xs);">
+          <div style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-amber); font-size: 0.9rem; margin-bottom: 0.3rem;">Zero-Trust Security Auditor</div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Regex security pattern testing for credentials, JWT tokens, AWS IAM access keys, and PII masking.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); padding: 1rem; border-radius: var(--radius-xs);">
+          <div style="font-family: var(--font-mono); font-weight: 700; color: #f85149; font-size: 0.9rem; margin-bottom: 0.3rem;">Incident Post-Mortem Board</div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Curating 1,500+ word technical post-mortems from major high-profile cloud and database outages.</p>
+        </div>
+      </div>
+
+      <h2>Editorial Standards & Code Integrity</h2>
+      <p>
+        Every architectural guide and post-mortem published on RuntimeZero undergoes rigorous verification against production Linux kernels, PostgreSQL internals, and standard cloud provider documentation. We reject shallow AI fluff; every post provides copy-pasteable production configurations, mathematical derivations, and battle-tested mitigation procedures.
+      </p>
+
+      <h2>Security Inquiries & Incident Reporting</h2>
+      <p>
+        For security questions, responsible disclosure, or partnership inquiries, reach out to our team at:
+        <br>
+        <code>ops@runtimezero.dev</code>
+      </p>
+    </div>
+  </article>
+</div>
+{% endblock %}

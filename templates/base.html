@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}RuntimeZero — Systems Engineering Simulators & Cloud Calculators{% endblock %}</title>
+  <meta name="description" content="{% block description %}Client-side visual systems simulators, PostgreSQL connection pool models, AWS egress pricing calculators, and crontab visualizers. Evaluated 100% in-browser with zero telemetry.{% endblock %}">
+  
+  <meta name="google-site-verification" content="{% block google_verification %}GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE{% endblock %}">
+  
+  <link rel="canonical" href="{% block canonical %}https://runtimezero.dev/{% endblock %}">
+  <link rel="alternate" type="application/rss+xml" title="RuntimeZero Engineering Feed" href="/rss.xml">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RuntimeZero">
+  <meta property="og:title" content="{% block og_title %}RuntimeZero — Systems Engineering Simulators & Cloud Calculators{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Client-side systems engineering tools. Zero servers, zero telemetry.{% endblock %}">
+  <meta property="og:url" content="{{ self.canonical() }}">
+  
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@runtimezerodev">
+  <meta name="twitter:title" content="{% block twitter_title %}{{ self.og_title() }}{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_desc %}{{ self.og_description() }}{% endblock %}">
+  
+  <meta name="theme-color" content="#090d13">
+
+  <link rel="icon" type="image/svg+xml" href="/static/images/logo.svg">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Master Stylesheet (Embedded for Guaranteed Local File & Offline Execution) -->
+  {% if inline_css %}
+  <style>
+{{ inline_css | safe }}
+  </style>
+  {% endif %}
+  <link rel="stylesheet" href="/static/css/runtimezero.css?v=6">
+
+  <!-- Google AdSense Script (Pub ID configurable via environment) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}" crossorigin="anonymous"></script>
+
+  {% block json_ld %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RuntimeZero",
+    "url": "https://runtimezero.dev/",
+    "description": "Client-side systems engineering simulators and cloud cost calculators.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "RuntimeZero Engineering Team",
+      "url": "https://runtimezero.dev/about.html"
+    }
+  }
+  </script>
+  {% endblock %}
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <div class="brand-block">
+        <a href="/" class="brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+            <path d="M9 11L14 16L9 21" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="21" cy="20" r="3" fill="#3fb950"/>
+            <line x1="16" y1="21" x2="19" y2="21" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text">runtime<span class="brand-accent">zero</span></span>
+        </a>
+        <span class="brand-sub">systems engineering</span>
+      </div>
+
+      <div class="nav-controls">
+        <button class="search-trigger" aria-label="Quick Search" title="Search tools (Ctrl+K)">
+          <span>Search tools...</span>
+          <span class="kbd-chip">Ctrl K</span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="/" class="{% block nav_home %}{% endblock %}">Tools</a></li>
+          <li><a href="/#notes">Incident Notes</a></li>
+          <li><a href="/about.html" class="{% block nav_about %}{% endblock %}">Architecture</a></li>
+          <li><a href="/privacy.html" class="{% block nav_privacy %}{% endblock %}">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Google AdSense Official Leaderboard Unit -->
+  <aside class="ad-leaderboard-container" aria-label="Advertisement">
+    <div class="ad-slot-frame">
+      <span class="ad-disclosure-label">ADVERTISEMENT</span>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="{{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </aside>
+
+  <!-- Main Viewport Content -->
+  <main id="mainContent">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Command Palette Modal (Ctrl + K) -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Quick Search">
+    <div class="search-modal-content">
+      <div class="search-input-wrapper">
+        <input type="text" id="modalSearchInput" placeholder="Filter tools, calculators, and post-mortems..." autocomplete="off">
+        <span class="search-hint">ESC</span>
+      </div>
+      <div class="search-results-list" id="modalSearchResults">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <div class="brand" style="margin-bottom: 0.65rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+              <path d="M9 11L14 16L9 21" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="21" cy="20" r="3" fill="#3fb950"/>
+              <line x1="16" y1="21" x2="19" y2="21" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-text">runtime<span class="brand-accent">zero</span></span>
+          </div>
+          <p class="footer-desc">
+            Client-side visual systems simulators, cloud cost calculators, and production outage analyses. Evaluated 100% in your browser's local sandbox with zero server telemetry.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            <span>All 6 Simulators Ready • 100% In-Browser</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">Tools & Simulators</div>
+          <ul class="footer-links">
+            <li><a href="/tools/db-deadlock-simulator.html">PostgreSQL Connection Pool Starvation</a></li>
+            <li><a href="/tools/aws-egress-calculator.html">AWS Egress Bandwidth Calculator</a></li>
+            <li><a href="/tools/airgapped-log-sanitizer.html">Client-Side Log Redactor & Scrubber</a></li>
+            <li><a href="/tools/crontab-visualizer.html">Crontab 24h Execution Heatmap</a></li>
+            <li><a href="/tools/docker-compose-converter.html">Docker run to Hardened Compose</a></li>
+            <li><a href="/tools/llm-vram-sizer.html">LLM VRAM & Quantization Sizer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">Documentation & Legal</div>
+          <ul class="footer-links">
+            <li><a href="/about.html">Architecture & Verification</a></li>
+            <li><a href="/privacy.html">Privacy Policy & Cookies</a></li>
+            <li><a href="/privacy.html#adsense">Google AdSense Disclosure</a></li>
+            <li><a href="/privacy.html#gdpr">GDPR & CCPA Rights</a></li>
+            <li><a href="/sitemap.xml">XML Sitemap</a></li>
+            <li><a href="/rss.xml">Engineering RSS Feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 RuntimeZero. Evaluated 100% in client-side V8. Zero telemetry collected.
+        </div>
+        <div class="compliance-tags">
+          <span class="tag">GDPR Compliant</span>
+          <span class="tag">CCPA Ready</span>
+          <span class="tag">Zero Data Retention</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Embedded JavaScript Engines (Self-Contained Client Runtime) -->
+  {% if inline_simulators_js %}
+  <script>
+{{ inline_simulators_js | safe }}
+  </script>
+  {% endif %}
+  {% if inline_app_js %}
+  <script>
+{{ inline_app_js | safe }}
+  </script>
+  {% endif %}
+  <script src="/static/js/simulators.js?v=6"></script>
+  <script src="/static/js/app.js?v=6"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

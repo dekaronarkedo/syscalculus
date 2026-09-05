@@ -1,0 +1,23 @@
+# Global Security Headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Static Assets - 1 Year Immutable Browser Cache (100/100 Core Web Vitals)
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML Pages - Always Fresh Revalidation
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# XML Feeds & Sitemap
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/rss.xml
+  Cache-Control: public, max-age=3600
+/robots.txt
+  Cache-Control: public, max-age=86400

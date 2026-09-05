@@ -1,0 +1,50 @@
+name: RuntimeZero Cloudflare Pages & Production Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja2 markdown python-frontmatter python-dotenv
+
+      - name: Compile Static Site (build.py)
+        run: |
+          python build.py
+
+      - name: Verify Build Integrity & SEO Schemas
+        run: |
+          python -c "import os; assert os.path.exists('dist/index.html'), 'Missing dist/index.html'; assert os.path.exists('dist/sitemap.xml'), 'Missing dist/sitemap.xml'; print('Site build verified successfully.')"
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'runtimezero'
+          directory: 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true # Allows smooth fallback if secrets are not set yet

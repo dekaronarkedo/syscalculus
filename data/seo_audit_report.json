@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-09-05T16:46:37.520445",
+  "tools_audited": 8,
+  "keyword_scores": {
+    "aws-egress-calculator": {
+      "matched_keywords": [
+        "aws egress cost",
+        "cloudflare r2"
+      ],
+      "coverage_score": "10.5%"
+    },
+    "airgapped-log-sanitizer": {
+      "matched_keywords": [
+        "log sanitizer",
+        "air-gapped"
+      ],
+      "coverage_score": "10.5%"
+    },
+    "kafka-consumer-lag-estimator": {
+      "matched_keywords": [],
+      "coverage_score": "0.0%"
+    },
+    "db-deadlock-simulator": {
+      "matched_keywords": [
+        "database connection pool"
+      ],
+      "coverage_score": "5.3%"
+    },
+    "docker-compose-converter": {
+      "matched_keywords": [
+        "docker compose converter",
+        "hardened docker"
+      ],
+      "coverage_score": "10.5%"
+    },
+    "k8s-oom-killer-sizing": {
+      "matched_keywords": [],
+      "coverage_score": "0.0%"
+    },
+    "llm-vram-sizer": {
+      "matched_keywords": [
+        "llama 3 70b"
+      ],
+      "coverage_score": "5.3%"
+    },
+    "crontab-visualizer": {
+      "matched_keywords": [
+        "crontab visualizer",
+        "systemd timer"
+      ],
+      "coverage_score": "10.5%"
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}RuntimeZero — Systems Engineering Simulators & Cloud Calculators{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+<header class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>100% Client-Side Evaluation • Zero Telemetry Dispatched</span>
+    </div>
+    <h1 class="hero-title">
+      Systems Engineering Simulators & Cloud Cost Calculators
+    </h1>
+    <p class="hero-lead">
+      Interactive visual models for database connection pool starvation, AWS egress bandwidth pricing, Linux crontab schedules, and client-side log sanitization. Evaluated strictly in your browser's local sandbox—no logs, stack traces, or credentials are ever sent to an external server.
+    </p>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-tags">
+        <button class="tag-btn active" data-filter="all">All (6)</button>
+        <button class="tag-btn" data-filter="postgres">PostgreSQL</button>
+        <button class="tag-btn" data-filter="finops">Cloud FinOps</button>
+        <button class="tag-btn" data-filter="security">Security</button>
+        <button class="tag-btn" data-filter="linux">Linux</button>
+        <button class="tag-btn" data-filter="containers">Containers</button>
+        <button class="tag-btn" data-filter="ai">AI / GPU</button>
+      </div>
+      <div class="tools-count-badge">6 interactive tools</div>
+    </div>
+  </div>
+</header>
+
+<!-- Tools Directory Grid -->
+<section class="tools-section">
+  <div class="tools-grid">
+
+    <!-- Tool 1: DB Deadlock -->
+    <article class="card" data-cat="postgres">
+      <div class="card-header">
+        <span class="category-chip">PostgreSQL / SRE</span>
+        <span class="runtime-chip"><span class="dot"></span> Live Canvas</span>
+      </div>
+      <h2 class="card-title">
+        <a href="/tools/db-deadlock-simulator.html">Database Connection Pool & Deadlock Simulator</a>
+      </h2>
+      <p class="card-desc">
+        Simulate how thread queuing, unclosed connection leaks, and oversized pools cause P99 latency spikes under peak load. Implements the HikariCP pool sizing formula.
+      </p>
+      <div class="card-spec-box">
+        <div class="spec-label">Sizing Formula</div>
+        <div class="spec-value">connections = ((core_count * 2) + effective_spindles)</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-engine-tag">Canvas 2D • 0ms Latency</span>
+        <a href="/tools/db-deadlock-simulator.html" class="open-tool-link">Open Simulator →</a>
+      </div>
+    </article>
+
+    <!-- Tool 2: AWS Egress -->
+    <article class="card" data-cat="finops">
+      <div class="card-header">
+        <span class="category-chip">Cloud / FinOps</span>
+        <span class="runtime-chip"><span class="dot"></span> Live Model</span>
+      </div>
+      <h2 class="card-title">
+        <a href="/tools/aws-egress-calculator.html">AWS Egress Cost Calculator & Zero-Egress Blueprint</a>
+      </h2>
+      <p class="card-desc">
+        Calculate monthly data transfer out fees across AWS regions and compare direct cost savings with Cloudflare R2 and Hetzner with production Terraform blueprints.
+      </p>
+      <div class="card-spec-box">
+        <div class="spec-label">Pricing Benchmark</div>
+        <div class="spec-value">AWS $0.09/GB (Internet) vs Cloudflare R2 $0.00/GB</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-engine-tag">Tiered Rates 2026</span>
+        <a href="/tools/aws-egress-calculator.html" class="open-tool-link">Open Calculator →</a>
+      </div>
+    </article>
+
+    <!-- Tool 3: Log Sanitizer -->
+    <article class="card" data-cat="security">
+      <div class="card-header">
+        <span class="category-chip">Zero-Trust / Security</span>
+        <span class="runtime-chip"><span class="dot"></span> Air-Gapped</span>
+      </div>
+      <h2 class="card-title">
+        <a href="/tools/airgapped-log-sanitizer.html">Client-Side Zero-Trust Log Sanitizer</a>
+      </h2>
+      <p class="card-desc">
+        Redact AWS access keys, JWT bearer tokens, database connection URIs, and IP addresses in local memory before sharing logs with team members or external tools.
+      </p>
+      <div class="card-spec-box">
+        <div class="spec-label">Memory Privacy</div>
+        <div class="spec-value">RegExp evaluated in local browser memory only</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-engine-tag">0 Bytes Exfiltrated</span>
+        <a href="/tools/airgapped-log-sanitizer.html" class="open-tool-link">Open Sanitizer →</a>
+      </div>
+    </article>
+
+    <!-- Tool 4: Crontab Visualizer -->
+    <article class="card" data-cat="linux">
+      <div class="card-header">
+        <span class="category-chip">Linux / DevOps</span>
+        <span class="runtime-chip"><span class="dot"></span> POSIX Parser</span>
+      </div>
+      <h2 class="card-title">
+        <a href="/tools/crontab-visualizer.html">Linux Crontab Visualizer & 24h Execution Heatmap</a>
+      </h2>
+      <p class="card-desc">
+        Deconstruct 5-part cron syntax into human-readable English, visual 24-hour execution heatmaps, and next upcoming execution timestamps without leaving the page.
+      </p>
+      <div class="card-spec-box">
+        <div class="spec-label">Standard POSIX Syntax</div>
+        <div class="spec-value">minute hour dom month dow (supports *, */n, comma, -)</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-engine-tag">UTC & Local Clock</span>
+        <a href="/tools/crontab-visualizer.html" class="open-tool-link">Open Visualizer →</a>
+      </div>
+    </article>
+
+    <!-- Tool 5: Docker Run to Compose -->
+    <article class="card" data-cat="containers">
+      <div class="card-header">
+        <span class="category-chip">Containers / Docker</span>
+        <span class="runtime-chip"><span class="dot"></span> AST Compiler</span>
+      </div>
+      <h2 class="card-title">
+        <a href="/tools/docker-compose-converter.html">Docker Run to Production Docker Compose Converter</a>
+      </h2>
+      <p class="card-desc">
+        Convert messy terminal docker run flags into production-grade, hardened docker-compose.yml files with restart policies, logging rotation, and healthchecks.
+      </p>
+      <div class="card-spec-box">
+        <div class="spec-label">Hardening Defaults</div>
+        <div class="spec-value">Adds no-new-privileges and json-file log rotation</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-engine-tag">Compose v3.8 Spec</span>
+        <a href="/tools/docker-compose-converter.html" class="open-tool-link">Open Converter →</a>
+      </div>
+    </article>
+
+    <!-- Tool 6: LLM VRAM Sizer -->
+    <article class="card" data-cat="ai">
+      <div class="card-header">
+        <span class="category-chip">AI / GPU Infra</span>
+        <span class="runtime-chip"><span class="dot"></span> VRAM Math</span>
+      </div>
+      <h2 class="card-title">
+        <a href="/tools/llm-vram-sizer.html">LLM VRAM & Quantization Memory Sizer</a>
+      </h2>
+      <p class="card-desc">
+        Calculate GPU memory requirements for LLaMA 3, DeepSeek, and Mistral models across weights, dynamic KV-cache, and CUDA runtime overhead.
+      </p>
+      <div class="card-spec-box">
+        <div class="spec-label">Memory Formula</div>
+        <div class="spec-value">Weights (bits/8) + KV-Cache (2*layers*heads*ctx) + CUDA</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-engine-tag">Hardware Matcher</span>
+        <a href="/tools/llm-vram-sizer.html" class="open-tool-link">Open Sizer →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Official Programmatic Google AdSense In-Feed Slot -->
+<div class="ad-leaderboard-container">
+  <div class="ad-slot-frame">
+    <span class="ad-disclosure-label">ADVERTISEMENT</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}"
+         data-ad-slot="9876543210"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- Incident Notes & Post-Mortems Section -->
+<section class="articles-section" id="notes">
+  <div class="section-title-row">
+    <h2>Incident Notes & Architecture Analyses</h2>
+    <p>Detailed post-mortems analyzing real production failure modes, sizing formulas, and cost blueprints.</p>
+  </div>
+
+  <div class="articles-stack">
+    
+    <article class="article-item">
+      <div class="article-header">
+        <span class="article-badge">INCIDENT POST-MORTEM</span>
+        <span class="article-time">September 2026 • 12 min read • SRE Group</span>
+      </div>
+      <h3 class="article-title">
+        <a href="/tools/db-deadlock-simulator.html#postmortem">How an Unchecked Connection Pool Brought Down a $20M Fintech Platform on Black Friday</a>
+      </h3>
+      <p class="article-excerpt">
+        An in-depth post-mortem analyzing how HikariCP connection starvation cascading with microservice retries caused a 3-hour global outage. Includes HikariCP mathematical sizing formulas, thread-pool isolation patterns, and mitigation checklist.
+      </p>
+      <a href="/tools/db-deadlock-simulator.html#postmortem" class="article-read-link">Read technical analysis & proof →</a>
+    </article>
+
+    <article class="article-item">
+      <div class="article-header">
+        <span class="article-badge">FINOPS ANALYSIS</span>
+        <span class="article-time">September 2026 • 15 min read • Infrastructure Architecture</span>
+      </div>
+      <h3 class="article-title">
+        <a href="/tools/aws-egress-calculator.html#postmortem">The Anatomy of AWS Egress Pricing: Saving $84,000/yr With Hybrid Cloudflare Edge Routing</a>
+      </h3>
+      <p class="article-excerpt">
+        Why AWS charges up to $0.09/GB for data out to the internet while bandwidth wholesale costs less than $0.001/GB. Complete architecture breakdown using Cloudflare R2, AWS PrivateLink, and reverse proxy egress caching.
+      </p>
+      <a href="/tools/aws-egress-calculator.html#postmortem" class="article-read-link">Read architecture guide & Terraform snippet →</a>
+    </article>
+
+    <article class="article-item">
+      <div class="article-header">
+        <span class="article-badge">SECURITY NOTE</span>
+        <span class="article-time">September 2026 • 9 min read • InfoSec</span>
+      </div>
+      <h3 class="article-title">
+        <a href="/tools/airgapped-log-sanitizer.html#postmortem">Why Corporate Security Forbids Pasting Logs into Web Tools (And How to Build Air-Gapped Workbenches)</a>
+      </h3>
+      <p class="article-excerpt">
+        Exposing company database credentials, AWS access keys, and customer PII to third-party web formatters is a primary breach vector. Learn why zero-exfiltration client-side tooling is the enterprise compliance standard.
+      </p>
+      <a href="/tools/airgapped-log-sanitizer.html#postmortem" class="article-read-link">Read security guide & Web Crypto proof →</a>
+    </article>
+
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,470 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tool.title }} | RuntimeZero{% endblock %}
+{% block description %}{{ tool.meta_description }}{% endblock %}
+{% block canonical %}https://runtimezero.dev/tools/{{ tool.slug }}.html{% endblock %}
+{% block og_title %}{{ tool.title }}{% endblock %}
+{% block og_description %}{{ tool.meta_description }}{% endblock %}
+
+{% block json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ tool.title }}",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "{{ tool.meta_description }}",
+  "author": {
+    "@type": "Organization",
+    "name": "RuntimeZero Engineering Team",
+    "url": "https://runtimezero.dev/about.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ tool.article_headline }}",
+  "description": "{{ tool.meta_description }}",
+  "datePublished": "{{ tool.date_published }}",
+  "dateModified": "{{ tool.date_modified }}",
+  "author": {
+    "@type": "Organization",
+    "name": "RuntimeZero Engineering Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RuntimeZero",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://runtimezero.dev/static/images/logo.svg"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://runtimezero.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Systems Simulators",
+      "item": "https://runtimezero.dev/#tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ tool.title }}",
+      "item": "https://runtimezero.dev/tools/{{ tool.slug }}.html"
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<header class="tool-hero-header">
+  <div class="tool-badge-row">
+    <span class="tool-category-badge">{{ tool.category }}</span>
+    <span class="air-gapped-pill"><span class="dot"></span> 100% IN-BROWSER • 0 BYTES EXFILTRATED</span>
+  </div>
+  <h1 class="tool-title">{{ tool.title }}</h1>
+  <p class="tool-subtitle">{{ tool.subtitle }}</p>
+</header>
+
+<!-- Master Interactive Workbench Section -->
+<section class="workbench-wrapper">
+  <div class="workbench-card">
+    <div class="workbench-bar">
+      <span>WORKBENCH // RUNTIME ENVIRONMENT: CLIENT V8</span>
+      <span class="status-live">● ENGINE READY</span>
+    </div>
+
+    {# ------------------ 1. DB DEADLOCK SIMULATOR WORKBENCH ------------------ #}
+    {% if tool.slug == 'db-deadlock-simulator' %}
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Max Connection Pool Size (HikariCP / pg)</span>
+            <span class="control-val-display" id="poolSizeVal">20</span>
+          </div>
+          <input type="range" id="poolSize" min="5" max="50" value="20" step="1">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Incoming Traffic Rate</span>
+            <span class="control-val-display" id="reqRateVal">30 req/s</span>
+          </div>
+          <input type="range" id="reqRate" min="5" max="150" value="30" step="5">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Mean Query Duration</span>
+            <span class="control-val-display" id="queryDurationVal">250 ms</span>
+          </div>
+          <input type="range" id="queryDuration" min="50" max="1500" value="250" step="50">
+        </div>
+
+        <div class="control-group" style="margin-top: 0.5rem;">
+          <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.82rem; color: #ff7b72;">
+            <input type="checkbox" id="leakToggle" style="accent-color: #f85149; width: 16px; height: 16px;">
+            <span>Simulate Unclosed Connection Leak (Bug in ORM finally block)</span>
+          </label>
+        </div>
+
+        <div class="metrics-grid-row">
+          <div class="metric-pill">
+            <div class="metric-name">Active Conns</div>
+            <div class="metric-value" id="metricActiveConn">0 / 20</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Queue Depth</div>
+            <div class="metric-value" id="metricQueue" style="color: #3fb950">0</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">P99 Latency</div>
+            <div class="metric-value" id="metricP99" style="color: #38bdf8">12 ms</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Drop Rate</div>
+            <div class="metric-value" id="metricErrorRate" style="color: #3fb950">0.0%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workbench-right">
+        <div class="sim-canvas-container">
+          <canvas id="simCanvas"></canvas>
+        </div>
+        <div class="terminal-container" style="margin-top: 0.75rem;">
+          <div class="terminal-bar">
+            <span>LIVE POSTGRES METRICS TAIL</span>
+            <button class="copy-code-btn" data-copy-target="#simTerminalLog">Copy Logs</button>
+          </div>
+          <div class="terminal-body" id="simTerminalLog" style="height: 110px;">
+            <div class="term-line" style="color: #3fb950;">[SYSTEM] Initialized PostgreSQL connection pool with idle_timeout=10000ms</div>
+            <div class="term-line">[INFO] Application threads healthy. Waiting for worker transactions.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# ------------------ 2. AWS EGRESS COST CALCULATOR ------------------ #}
+    {% elif tool.slug == 'aws-egress-calculator' %}
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Monthly Internet Data Egress</span>
+            <span class="control-val-display" id="egressTbDisplay">10 TB</span>
+          </div>
+          <input type="range" id="egressTbSlider" min="1" max="250" value="10" step="1">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Primary AWS Cloud Region</span>
+          </div>
+          <select id="awsRegionSelect" class="dev-input" style="height: 38px; padding: 0.4rem;">
+            <option value="us-east-1">US East (N. Virginia / Ohio) - Baseline Tier</option>
+            <option value="eu-central-1">Europe (Frankfurt / Ireland)</option>
+            <option value="ap-southeast-1">Asia Pacific (Singapore / Tokyo) [+25% Premium]</option>
+            <option value="sa-east-1">South America (São Paulo) [+55% Premium]</option>
+          </select>
+        </div>
+
+        <div class="cost-comparison-box" style="background: #090c10; border: 1px solid var(--border-default); padding: 1rem; border-radius: var(--radius-xs);">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">ESTIMATED MONTHLY EGRESS BILLING</div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-muted);">
+            <span>AWS Internet Egress:</span>
+            <strong id="awsTotalCost" style="color: #f85149; font-size: 1.1rem; font-family: var(--font-mono);">$891 /mo</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-muted);">
+            <span>Cloudflare R2 Object Storage:</span>
+            <strong id="r2TotalCost" style="color: #3fb950; font-size: 1.1rem; font-family: var(--font-mono);">$0.00 /mo</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <span>Hetzner Cloud (20TB Free Included):</span>
+            <strong id="hetznerTotalCost" style="color: #38bdf8; font-size: 1.1rem; font-family: var(--font-mono);">$0.00 /mo</strong>
+          </div>
+        </div>
+
+        <div class="savings-alert-pill" style="background: rgba(63, 185, 80, 0.1); border: 1px solid rgba(63, 185, 80, 0.3); padding: 0.75rem; border-radius: var(--radius-xs); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.82rem; color: #fff;">Potential Direct R2 Savings:</span>
+          <span style="font-family: var(--font-mono); font-weight: 700; color: #3fb950; font-size: 1.1rem;"><span id="r2SavingsAmount">$891</span> <span id="r2SavingsPercent">(-100%)</span></span>
+        </div>
+      </div>
+
+      <div class="workbench-right">
+        <div class="terminal-container" style="flex-grow: 1;">
+          <div class="terminal-bar">
+            <span>GENERATED TERRAFORM INFRASTRUCTURE SNIPPET</span>
+            <button class="copy-code-btn" data-copy-target="#terraformSnippet">Copy HCL</button>
+          </div>
+          <textarea id="terraformSnippet" class="dev-input" style="height: 380px; font-family: var(--font-mono); font-size: 0.78rem;" readonly></textarea>
+        </div>
+      </div>
+    </div>
+
+    {# ------------------ 3. AIR-GAPPED LOG SANITIZER ------------------ #}
+    {% elif tool.slug == 'airgapped-log-sanitizer' %}
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">RAW INPUT LOGS (LOCAL MEMORY ONLY)</span>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btnLoadSampleLog" class="btn-copy" style="font-size: 0.72rem; padding: 0.25rem 0.5rem;">Load Sample</button>
+            <button id="btnClearLog" class="btn-copy" style="font-size: 0.72rem; padding: 0.25rem 0.5rem;">Clear</button>
+          </div>
+        </div>
+        <textarea id="logRawInput" class="dev-input" placeholder="Paste sensitive application logs, stack traces, or terminal output here..."></textarea>
+
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">DETECTION RULES:</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; font-size: 0.78rem;">
+          <label><input type="checkbox" id="redactAwsKeys" checked> AWS Keys & Secrets</label>
+          <label><input type="checkbox" id="redactJwt" checked> JWT Bearer Tokens</label>
+          <label><input type="checkbox" id="redactDbUris" checked> Database URIs</label>
+          <label><input type="checkbox" id="redactIps" checked> IPv4 Addresses</label>
+          <label><input type="checkbox" id="redactEmails" checked> Email Addresses</label>
+        </div>
+      </div>
+
+      <div class="workbench-right">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">SANITIZED STREAM (ZERO NETWORK TRANSMISSION)</span>
+          <button class="copy-code-btn" data-copy-target="#logSanitizedOutput">Copy Sanitized</button>
+        </div>
+        <textarea id="logSanitizedOutput" class="dev-input" readonly placeholder="Redacted logs will appear here in real-time..."></textarea>
+
+        <div class="metrics-grid-row" style="margin-top: 0.75rem;">
+          <div class="metric-pill">
+            <div class="metric-name">Redacted Secrets</div>
+            <div class="metric-value" id="redactedSecretsCount" style="color: #3fb950;">0</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Execution Time</div>
+            <div class="metric-value" id="redactionTimeMs" style="color: #38bdf8;">0.0 ms</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Network Outbound</div>
+            <div class="metric-value" style="color: #3fb950;">0 Bytes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# ------------------ 4. CRONTAB VISUALIZER ------------------ #}
+    {% elif tool.slug == 'crontab-visualizer' %}
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Enter 5-Part Standard Crontab Expression</span>
+          </div>
+          <input type="text" id="cronExpressionInput" class="dev-input" value="*/15 * * * *" style="height: 44px; font-size: 1.1rem; font-weight: 700; color: #38bdf8;">
+        </div>
+
+        <div style="background: #090c10; border: 1px solid var(--border-default); padding: 0.85rem; border-radius: var(--radius-xs);">
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.3rem;">HUMAN READABLE SCHEDULE:</div>
+          <div id="cronHumanReadable" style="font-family: var(--font-mono); font-size: 0.95rem; color: #fff; font-weight: 600;">Runs at every 15 minutes, every hour</div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">QUICK PRODUCTION PRESETS:</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <button class="cron-preset-btn btn-copy" data-cron="0 * * * *">Every Hour</button>
+          <button class="cron-preset-btn btn-copy" data-cron="*/5 * * * *">Every 5 Mins</button>
+          <button class="cron-preset-btn btn-copy" data-cron="0 2 * * *">Daily at 2:00 AM</button>
+          <button class="cron-preset-btn btn-copy" data-cron="0 0 * * 1">Every Monday Midnight</button>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">UPCOMING 5 EXECUTIONS (UTC):</div>
+          <ul id="cronNextRunsList" style="list-style: none; font-size: 0.82rem; font-family: var(--font-mono); display: flex; flex-direction: column; gap: 0.4rem;">
+            <!-- Rendered by JS -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="workbench-right">
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.75rem;">24-HOUR EXECUTION DENSITY HEATMAP</div>
+        <div id="cronHeatmapGrid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem; flex-grow: 1;">
+          <!-- 24 hour boxes rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    {# ------------------ 5. DOCKER RUN TO COMPOSE ------------------ #}
+    {% elif tool.slug == 'docker-compose-converter' %}
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Terminal Docker Run Command</span>
+          </div>
+          <textarea id="dockerRunInput" class="dev-input" style="height: 320px;" placeholder="Paste docker run command here... e.g.&#10;docker run -d --name redis-cluster -p 6379:6379 -v redis_data:/data --restart always redis:7-alpine --requirepass mysecretpass">docker run -d --name production-api -p 8080:8080 -v /etc/ssl/certs:/etc/ssl/certs:ro -e NODE_ENV=production -e DB_HOST=db.internal --restart unless-stopped node:20-alpine</textarea>
+        </div>
+        <button id="btnDockerConvert" class="tool-launch-btn" style="width: 100%; justify-content: center; margin-top: 0.5rem;">Convert to Hardened Compose →</button>
+      </div>
+
+      <div class="workbench-right">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">COMPOSE V3.8 SPEC (HARDENED SECURITY)</span>
+          <button class="copy-code-btn" data-copy-target="#dockerComposeOutput">Copy Compose YAML</button>
+        </div>
+        <textarea id="dockerComposeOutput" class="dev-input" style="height: 360px;" readonly></textarea>
+      </div>
+    </div>
+
+    {# ------------------ 6. LLM VRAM SIZER ------------------ #}
+    {% elif tool.slug == 'llm-vram-sizer' %}
+    <div class="workbench-body">
+      <div class="workbench-left">
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Model Size (Parameters)</span>
+            <span class="control-val-display" id="llmParamDisplay">70B Parameters</span>
+          </div>
+          <input type="range" id="llmParamSlider" min="1" max="140" value="70" step="1">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Quantization Precision</span>
+          </div>
+          <select id="llmQuantSelect" class="dev-input" style="height: 38px; padding: 0.4rem;">
+            <option value="16">FP16 / BF16 (16-bit unquantized) - Full Precision</option>
+            <option value="8">INT8 (8-bit quantization) - Low Perplexity Loss</option>
+            <option value="4" selected>INT4 / Q4_K_M (4-bit) - Optimal Consumer / Enterprise Tradeoff</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label-row">
+            <span>Context Window Length</span>
+          </div>
+          <select id="llmCtxSelect" class="dev-input" style="height: 38px; padding: 0.4rem;">
+            <option value="4096">4k Tokens (Baseline)</option>
+            <option value="8192" selected>8k Tokens (Standard Chat)</option>
+            <option value="32768">32k Tokens (Extended Code Review)</option>
+            <option value="131072">128k Tokens (Full Repository Context)</option>
+          </select>
+        </div>
+
+        <div class="metrics-grid-row">
+          <div class="metric-pill">
+            <div class="metric-name">Weights VRAM</div>
+            <div class="metric-value" id="llmWeightsVram" style="color: #38bdf8;">35.0 GB</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">KV Cache VRAM</div>
+            <div class="metric-value" id="llmKvVram" style="color: #d29922;">2.7 GB</div>
+          </div>
+          <div class="metric-pill">
+            <div class="metric-name">Total Minimum VRAM</div>
+            <div class="metric-value" id="llmTotalVram" style="color: #3fb950; font-size: 1.3rem;">41.2 GB</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workbench-right">
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.75rem;">HARDWARE ACCELERATOR RECOMMENDATION</div>
+        <div style="background: #090c10; border: 1px solid var(--border-default); border-radius: var(--radius-sm); padding: 1.5rem; text-align: center;">
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; font-family: var(--font-mono);">RECOMMENDED MINIMUM GPU TIER:</div>
+          <div id="llmHardwareRec" style="font-size: 1.3rem; font-weight: 800; color: #fff; font-family: var(--font-mono); margin-bottom: 1rem;">
+            Dual GPU (2x RTX 3090 / 1x A6000 48GB)
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); max-width: 420px; margin: 0 auto; line-height: 1.5;">
+            Calculated assuming PyTorch/vLLM memory pool overhead, CUDA context allocation, and KV-cache headroom under concurrent batch requests.
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- Official Google AdSense Mid-Page Unit -->
+<div class="ad-leaderboard-container" style="margin: 2.5rem 0;">
+  <div class="ad-slot-frame">
+    <span class="ad-disclosure-label">ADVERTISEMENT</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}"
+         data-ad-slot="5555555555"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- 1,500+ Word Engineering Post-Mortem & Architecture Deep-Dive -->
+<section class="article-section" id="postmortem">
+  <div class="article-layout-container">
+    
+    <!-- Main Article Body -->
+    <article class="article-content-body">
+      <div class="article-header-meta">
+        <div class="author-avatar-row">
+          <div class="author-badge">
+            <span class="author-name">RuntimeZero SRE & Systems Architecture Team</span>
+            <span class="post-date">Published {{ tool.date_published }} • Peer Reviewed by Infrastructure Working Group</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Raw Injected Markdown Content -->
+      <div class="markdown-prose">
+        {{ tool.article_html | safe }}
+      </div>
+
+      <!-- Technical FAQ Accordion Section for Rich Schema Snippets -->
+      {% if tool.faqs %}
+      <div class="faq-accordion-section" style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1.25rem;">Frequently Asked Technical Questions</h3>
+        {% for faq in tool.faqs %}
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 0.75rem;">
+          <summary style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: #fff; cursor: pointer;">{{ faq.question }}</summary>
+          <p style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">{{ faq.answer }}</p>
+        </details>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </article>
+
+    <!-- Sticky Programmatic Google AdSense Skyscraper Sidebar Unit (300x600) -->
+    <aside class="article-sidebar">
+      <div class="sticky-ad-container">
+        <div class="ad-skyscraper-frame">
+          <span class="ad-disclosure-label">ADVERTISEMENT</span>
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:300px;height:600px"
+               data-ad-client="{{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}"
+               data-ad-slot="7777777777"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+{% endblock %}
