@@ -1,5 +1,5 @@
 """
-RuntimeZero - Autonomous Principal Engineer Agent
+SysCalculus - Autonomous Principal Engineer Agent
 Manages creation, scaffolding, and verification of interactive client-side systems simulators.
 """
 

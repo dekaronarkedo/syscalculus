@@ -1,6 +1,6 @@
 """
 ================================================================================
-RuntimeZero - Autonomous Ghost Founder Multi-Agent DAC Engine
+SysCalculus - Autonomous Ghost Founder Multi-Agent DAC Engine
 Single Unified Master Entry Point
 ================================================================================
 Controls:
@@ -29,7 +29,7 @@ from engine.agents.sentinel_agent import SentinelAgent
 PORT = int(os.environ.get("PORT", 3000))
 WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-class RuntimeZeroDAC:
+class SysCalculusDAC:
     def __init__(self):
         self.workspace_root = WORKSPACE_ROOT
         self.dist_dir = os.path.join(WORKSPACE_ROOT, "dist")
@@ -107,7 +107,7 @@ class RuntimeZeroDAC:
                 pass
 
         print("\n" + "="*65)
-        print("  RUNTIMEZERO (runtimezero.dev) - GHOST FOUNDER DAC DASHBOARD")
+        print("  RUNTIMEZERO (syscalculus.dev) - GHOST FOUNDER DAC DASHBOARD")
         print("="*65)
         print(f"  * Platform URL:       http://localhost:{PORT}")
         print(f"  * Active Tools:       {len(tools)} Systems Simulators")
@@ -161,15 +161,15 @@ class RuntimeZeroDAC:
 
 def main():
     print(r"""
-  ____             _   _                  ___             
- |  _ \ _   _ _ __ | |_(_)_ __ ___   ___  |__ / ___ _ __ ___  
- | |_) | | | | '_ \| __| | '_ ` _ \ / _ \   |_ \/ _ \ '__/ _ \ 
- |  _ <| |_| | | | | |_| | | | | | |  __/  ___) | __/ | | (_) |
- |_| \_\\__,_|_| |_|\__|_|_| |_| |_|\___| |____/ \___|_|  \___/ 
-      Autonomous Multi-Agent Digital Company (DAC) Engine
+  ____             ____      _            _             
+ / ___| _   _ ___ / ___|__ _| | ___ _   _| |_   _ ___ 
+ \___ \| | | / __| |   / _` | |/ __| | | | | | | / __|
+  ___) | |_| \__ \ |__| (_| | | (__| |_| | | |_| \__ \
+ |____/ \__, |___/\____\__,_|_|\___|\__,_|_|\__,_|___/
+        |___/   Deterministic Systems Engineering & Cloud Math DAC
     """)
 
-    dac = RuntimeZeroDAC()
+    dac = SysCalculusDAC()
 
     # 1. Initial Site Compilation
     dac.run_autonomous_cycle()
@@ -205,11 +205,11 @@ def main():
     # Interactive loop
     while True:
         try:
-            cmd = input("runtimezero> ").strip().lower()
+            cmd = input("syscalculus> ").strip().lower()
             if not cmd:
                 continue
             if cmd in ["exit", "quit", "q"]:
-                print("[SYSTEM] Shutting down RuntimeZero DAC...")
+                print("[SYSTEM] Shutting down SysCalculus DAC...")
                 dac.server_controller.stop()
                 dac.sentinel.stop()
                 break
@@ -238,7 +238,7 @@ def main():
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] in ["--cron", "--cycle", "-c"]:
-        dac = RuntimeZeroDAC()
+        dac = SysCalculusDAC()
         dac.run_autonomous_cycle()
         sys.exit(0)
     main()

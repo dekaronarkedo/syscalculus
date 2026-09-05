@@ -1,7 +1,7 @@
 # 🚀 RUNTIMEZERO: $0 MALİYETLE 2 DAKİKADA CANLIYA ALMA REHBERİ
 ### *Sıfır Masrafla 24/7 Bulutta Yaşayan Otonom Dijital Şirket*
 
-Bu rehber, **RuntimeZero** sistemini yerel bilgisayarından çıkarıp dünya çapında en hızlı sunucularda (**Cloudflare Pages**) **$0 maliyetle** yayına almanı ve **GitHub Actions** ile 24/7 otonom çalıştırmanı sağlar.
+Bu rehber, **SysCalculus** sistemini yerel bilgisayarından çıkarıp dünya çapında en hızlı sunucularda (**Cloudflare Pages**) **$0 maliyetle** yayına almanı ve **GitHub Actions** ile 24/7 otonom çalıştırmanı sağlar.
 
 ---
 
@@ -21,11 +21,11 @@ git init
 
 # 2. Tüm dosyaları ekle ve ilk paketi hazırla
 git add .
-git commit -m "feat: initial launch of runtimezero autonomous dac"
+git commit -m "feat: initial launch of syscalculus autonomous dac"
 
-# 3. GitHub'da "runtimezero" adında yeni bir Public repository (depo) aç ve adresini bağla:
+# 3. GitHub'da "syscalculus" adında yeni bir Public repository (depo) aç ve adresini bağla:
 git branch -M main
-git remote add origin https://github.com/KULLANICI_ADIN/runtimezero.git
+git remote add origin https://github.com/KULLANICI_ADIN/syscalculus.git
 
 # 4. Kodları buluta fırlat
 git push -u origin main
@@ -38,9 +38,9 @@ git push -u origin main
 1. [Cloudflare Dashboard](https://dash.cloudflare.com)'a giriş yap.
 2. Sol menüden **Workers & Pages** > **Create application** > **Pages** sekmesine tıkla.
 3. **Connect to Git** seçeneğini seç ve GitHub hesabını bağla.
-4. Az önce açtığın `runtimezero` deposunu seç ve **Begin setup** de.
+4. Az önce açtığın `syscalculus` deposunu seç ve **Begin setup** de.
 5. Ayarları aynen şu şekilde doldur:
-   * **Project name:** `runtimezero`
+   * **Project name:** `syscalculus`
    * **Production branch:** `main`
    * **Framework preset:** `None`
    * **Build command:** `python build.py`
@@ -48,7 +48,7 @@ git push -u origin main
 6. **Save and Deploy** butonuna bas!
 
 🎉 **TEBRİKLER!** 30 saniye içinde siten tüm dünyada yayına girecek:  
-👉 `https://runtimezero.pages.dev` (veya belirlediğin isim)
+👉 `https://syscalculus.pages.dev` (veya belirlediğin isim)
 
 ---
 
@@ -74,7 +74,7 @@ GitHub reponda **Settings > Secrets and variables > Actions** sekmesine gidip ş
 
 Google'ın siteni 24 saat içinde indekslemesi için:
 1. [Google Search Console](https://search.google.com/search-console)'a git.
-2. Sitenin adresini gir (`https://runtimezero.pages.dev`).
+2. Sitenin adresini gir (`https://syscalculus.pages.dev`).
 3. Sol menüden **Sitemaps (Site Haritaları)** bölümüne tıkla.
 4. `sitemap.xml` yazıp **Gönder (Submit)** butonuna bas.
 

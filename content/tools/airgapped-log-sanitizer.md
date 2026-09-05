@@ -10,8 +10,8 @@ date_modified: "2026-09-05"
 faqs:
   - question: "Why is pasting application logs into random online web formatters dangerous?"
     answer: "Most free online utility tools (JSON formatters, regex testers, log parsers) log user inputs into backend server access logs, Google Analytics, or third-party session replay software. Sensitive data such as production database passwords, JWT session tokens, and AWS IAM credentials are frequently exposed to attackers via compromised utility servers."
-  - question: "How does RuntimeZero guarantee zero data exfiltration?"
-    answer: "RuntimeZero's log sanitizer utilizes client-side JavaScript RegExp engines and Web Crypto API entirely inside your local browser tab. No XMLHttpRequest (XHR) or fetch API calls are triggered when processing logs. You can verify this by disabling network connectivity in your browser while using the tool."
+  - question: "How does SysCalculus guarantee zero data exfiltration?"
+    answer: "SysCalculus's log sanitizer utilizes client-side JavaScript RegExp engines and Web Crypto API entirely inside your local browser tab. No XMLHttpRequest (XHR) or fetch API calls are triggered when processing logs. You can verify this by disabling network connectivity in your browser while using the tool."
   - question: "What regulatory frameworks prohibit pasting logs into third-party web tools?"
     answer: "SOC 2 Type II (Confidentiality and Privacy criteria), HIPAA Security Rule (45 CFR § 164.312), PCI-DSS Requirement 3 (Protect Stored Cardholder Data), and GDPR Article 32 (Security of Processing) strictly prohibit transmitting production credentials or customer PII to unauthorized processors."
 ---
@@ -128,12 +128,12 @@ export class ZeroTrustLogSanitizerStream extends Transform {
 
 ## Verification Guide: Auditing Browser Network Isolation
 
-You do not have to take our word for granted that RuntimeZero is 100% air-gapped. You can independently audit this page in under 30 seconds using Chrome DevTools:
+You do not have to take our word for granted that SysCalculus is 100% air-gapped. You can independently audit this page in under 30 seconds using Chrome DevTools:
 
 1. Open your browser Developer Tools (**F12** or **Ctrl + Shift + I**).
 2. Click on the **Network** tab.
 3. Check the **Disable cache** and filter by **Fetch/XHR**.
 4. Clear the existing network log (🚫 icon).
-5. Paste 50,000 lines of sensitive log data into the RuntimeZero sanitizer input.
+5. Paste 50,000 lines of sensitive log data into the SysCalculus sanitizer input.
 6. **Observation:** Notice that **zero network requests are sent**. The request counter remains at 0, confirming that all regex transforms execute strictly in local memory.
 7. Optional: Toggle your computer's Wi-Fi / Ethernet **OFF** or switch to Airplane Mode. The tool continues to operate instantaneously without network access.

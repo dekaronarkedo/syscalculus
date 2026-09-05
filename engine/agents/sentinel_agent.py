@@ -1,6 +1,6 @@
 """
 ================================================================================
-RuntimeZero - Autonomous Self-Healing Sentinel & Quality Watchdog Agent
+SysCalculus - Autonomous Self-Healing Sentinel & Quality Watchdog Agent
 ================================================================================
 Core Mission:
 Continuously patrol, detect anomalies, verify HTTP availability, check static
@@ -225,7 +225,7 @@ class SentinelAgent:
         ]
         for url in probe_urls:
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": "RuntimeZeroSentinel/1.0"})
+                req = urllib.request.Request(url, headers={"User-Agent": "SysCalculusSentinel/1.0"})
                 with urllib.request.urlopen(req, timeout=3) as resp:
                     if resp.getcode() != 200:
                         return False, f"HTTP Probe {url} returned status {resp.getcode()}"

@@ -1,5 +1,5 @@
 """
-RuntimeZero - Autonomous SEO Department Agent
+SysCalculus - Autonomous SEO Department Agent
 Manages JSON-LD Structured Data, XML Sitemaps, Internal PageRank Graph, and High-CPC Keyword Auditing.
 """
 
@@ -40,7 +40,7 @@ class SeoAgent:
             }
         return report
 
-    def generate_sitemap_xml(self, tools_data, base_url="https://runtimezero.dev"):
+    def generate_sitemap_xml(self, tools_data, base_url="https://syscalculus.dev"):
         """Generates Google-compliant XML sitemap."""
         urlset = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
 
@@ -71,7 +71,7 @@ class SeoAgent:
         ET.indent(tree, space="  ", level=0)
         return ET.tostring(urlset, encoding="utf-8", method="xml").decode("utf-8")
 
-    def generate_robots_txt(self, base_url="https://runtimezero.dev"):
+    def generate_robots_txt(self, base_url="https://syscalculus.dev"):
         """Generates robots.txt with sitemap reference."""
         return f"""User-agent: *
 Allow: /
@@ -79,11 +79,11 @@ Allow: /
 Sitemap: {base_url}/sitemap.xml
 """
 
-    def generate_rss_xml(self, tools_data, base_url="https://runtimezero.dev"):
+    def generate_rss_xml(self, tools_data, base_url="https://syscalculus.dev"):
         """Generates RSS 2.0 Feed for developer syndication."""
         rss = ET.Element("rss", version="2.0")
         channel = ET.SubElement(rss, "channel")
-        ET.SubElement(channel, "title").text = "RuntimeZero | Air-Gapped Systems Simulators"
+        ET.SubElement(channel, "title").text = "SysCalculus | Air-Gapped Systems Simulators"
         ET.SubElement(channel, "link").text = base_url
         ET.SubElement(channel, "description").text = "Zero-server-latency visual systems simulators and post-mortems for cloud architects."
         ET.SubElement(channel, "language").text = "en-us"

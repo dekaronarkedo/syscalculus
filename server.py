@@ -1,5 +1,5 @@
 """
-RuntimeZero - Multi-Threaded Production Preview Server
+SysCalculus - Multi-Threaded Production Preview Server
 Serves dist/ directory with clean URL rewrites, security headers, and MIME-type handling.
 """
 
@@ -11,7 +11,7 @@ from socketserver import ThreadingTCPServer
 PORT = int(os.environ.get("PORT", 3000))
 DIST_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
 
-class RuntimeZeroHandler(SimpleHTTPRequestHandler):
+class SysCalculusHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIST_DIR, **kwargs)
 
@@ -62,11 +62,11 @@ class ServerController:
             build.build_site()
 
         ThreadingTCPServer.allow_reuse_address = True
-        self.httpd = ThreadingTCPServer(("0.0.0.0", self.port), RuntimeZeroHandler)
+        self.httpd = ThreadingTCPServer(("0.0.0.0", self.port), SysCalculusHandler)
         self.running = True
         self.thread = threading.Thread(target=self.httpd.serve_forever, daemon=True, name="HttpServerThread")
         self.thread.start()
-        print(f"[SERVER] RuntimeZero Live Server active on http://localhost:{self.port}")
+        print(f"[SERVER] SysCalculus Live Server active on http://localhost:{self.port}")
 
     def stop(self):
         if self.httpd:

@@ -1,4 +1,4 @@
-name: RuntimeZero Cloudflare Pages & Production Build
+name: SysCalculus Cloudflare Pages & Production Build
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: 'runtimezero'
+          projectName: 'syscalculus'
           directory: 'dist'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true # Allows smooth fallback if secrets are not set yet

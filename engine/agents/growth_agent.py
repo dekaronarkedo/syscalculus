@@ -1,5 +1,5 @@
 """
-RuntimeZero - Autonomous Growth & Developer Community Syndication Agent
+SysCalculus - Autonomous Growth & Developer Community Syndication Agent
 Generates value-first technical solutions for Reddit (r/devops, r/aws), 
 technical teardown threads for Twitter/X, and canonical syndicated posts for Dev.to/Hashnode.
 """
@@ -29,7 +29,7 @@ Connections = ((Core Count * 2) + Effective Spindle Count)
 On an 8-core database instance, 18-20 connections will almost always deliver higher throughput than 100 connections.
 
 We built an interactive, 100% client-side simulator where you can test pool starvation and leak thresholds live in your browser:
-https://runtimezero.dev/tools/db-deadlock-simulator.html (Runs entirely in-browser, zero logs sent to any server)
+https://syscalculus.dev/tools/db-deadlock-simulator.html (Runs entirely in-browser, zero logs sent to any server)
 
 Hope this helps anyone dealing with Black Friday / high-traffic connection exhaustion!"""
 
@@ -43,7 +43,7 @@ For an 80 TB/month workload, you're looking at ~$7,300/month just in egress.
 Cloudflare R2 implements the exact same S3 REST API (SigV4) but charges $0.00 for data transfer out. By pointing your public download domain to R2 while keeping your AWS EC2/EKS backend intact, you can completely eliminate internet egress bills.
 
 I wrote an open-source visual egress cost calculator and Terraform configuration template here:
-https://runtimezero.dev/tools/aws-egress-calculator.html (Evaluates 100% client-side, zero data sent to external servers)
+https://syscalculus.dev/tools/aws-egress-calculator.html (Evaluates 100% client-side, zero data sent to external servers)
 
 Terraform snippet is included for anyone looking to set up an active-active zero-egress mirror."""
 
@@ -55,7 +55,7 @@ Terraform snippet is included for anyone looking to set up an active-active zero
 Pasting production error logs into random online web formatters is one of the easiest ways to leak database credentials and AWS access keys (these sites often store logs in unauthenticated /tmp directories or use third-party session recorders).
 
 We created a zero-telemetry, 100% air-gapped log sanitizer:
-https://runtimezero.dev/tools/airgapped-log-sanitizer.html
+https://syscalculus.dev/tools/airgapped-log-sanitizer.html
 
 It scrubs:
 - AWS Access Keys (AKIA / ASIA)
@@ -71,7 +71,7 @@ You can disconnect your internet / turn on Airplane mode after loading the page 
             body = f"""We built an air-gapped, zero-network simulator for {tool.get('title')}.
 100% client-side, runs in your browser with zero telemetry.
 
-Check it out: https://runtimezero.dev/tools/{tool.get('slug')}.html"""
+Check it out: https://syscalculus.dev/tools/{tool.get('slug')}.html"""
 
         return {
             "platform": "reddit",
@@ -89,12 +89,12 @@ Check it out: https://runtimezero.dev/tools/{tool.get('slug')}.html"""
             f"🧵 1/5 The hidden reason database connection pools cause production outages under traffic spikes (and the mathematical formula to fix them):",
             f"2/5 Many engineers configure pool sizes to 100+ thinking 'more connections = more throughput'.\n\nReality: A 16-core CPU can only execute 16 threads simultaneously. 100+ threads cause catastrophic OS context-switching penalties & buffer lock contention.",
             f"3/5 The battle-tested HikariCP formula:\n\nPool Size = (Core Count * 2) + Effective Spindle Count\n\nFor an 8-core NVMe server, 18-20 connections will outperform 200 connections every single time.",
-            f"4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n👉 https://runtimezero.dev/tools/{slug}.html\n\n(100% client-side, zero logs or data sent to servers)",
+            f"4/5 We built an interactive Canvas simulator where you can test pool starvation, leak thresholds, and P99 latency spikes live in your browser:\n\n👉 https://syscalculus.dev/tools/{slug}.html\n\n(100% client-side, zero logs or data sent to servers)",
             f"5/5 Bookmark the tool and check your pg_stat_activity for 'idle in transaction' states before your next high-traffic launch. #DevOps #PostgreSQL #SRE #CloudEngineering"
         ]
         return {
             "platform": "twitter",
-            "handle": "@runtimezerodev",
+            "handle": "@syscalculusdev",
             "thread": tweets,
             "status": "pending",
             "created_at": datetime.utcnow().isoformat()
@@ -105,14 +105,14 @@ Check it out: https://runtimezero.dev/tools/{tool.get('slug')}.html"""
         return {
             "platform": "devto",
             "title": tool.get('article_headline', tool.get('title')),
-            "canonical_url": f"https://runtimezero.dev/tools/{tool.get('slug')}.html",
+            "canonical_url": f"https://syscalculus.dev/tools/{tool.get('slug')}.html",
             "tags": ["devops", "cloud", "architecture", "database"],
-            "body_markdown": f"""Originally published on [RuntimeZero](https://runtimezero.dev/tools/{tool.get('slug')}.html).
+            "body_markdown": f"""Originally published on [SysCalculus](https://syscalculus.dev/tools/{tool.get('slug')}.html).
 
 {tool.get('raw_content', '')}
 
 ---
-*Run the interactive simulator 100% in your browser with zero data exfiltration at [RuntimeZero](https://runtimezero.dev/tools/{tool.get('slug')}.html).*
+*Run the interactive simulator 100% in your browser with zero data exfiltration at [SysCalculus](https://syscalculus.dev/tools/{tool.get('slug')}.html).*
 """,
             "status": "pending",
             "created_at": datetime.utcnow().isoformat()
@@ -208,7 +208,7 @@ Check it out: https://runtimezero.dev/tools/{tool.get('slug')}.html"""
                         headers={
                             "Content-Type": "application/json",
                             "api-key": devto_key,
-                            "User-Agent": "RuntimeZeroGrowthAgent/1.0"
+                            "User-Agent": "SysCalculusGrowthAgent/1.0"
                         }
                     )
                     with urllib.request.urlopen(req, timeout=10) as resp:
@@ -227,14 +227,14 @@ Check it out: https://runtimezero.dev/tools/{tool.get('slug')}.html"""
                 try:
                     content_str = item.get("content") or "\n".join(item.get("thread", []))
                     payload = json.dumps({
-                        "username": "RuntimeZero Growth Sentinel",
+                        "username": "SysCalculus Growth Sentinel",
                         "content": f"**[SYNDICATED TO {platform.upper()}]** {item.get('title', '')}\n\n{content_str[:1500]}"
                     }).encode("utf-8")
 
                     req = urllib.request.Request(
                         discord_webhook,
                         data=payload,
-                        headers={"Content-Type": "application/json", "User-Agent": "RuntimeZeroWebhook/1.0"}
+                        headers={"Content-Type": "application/json", "User-Agent": "SysCalculusWebhook/1.0"}
                     )
                     with urllib.request.urlopen(req, timeout=8) as resp:
                         if resp.getcode() in [200, 204]:

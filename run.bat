@@ -1,9 +1,9 @@
 @echo off
-title RuntimeZero - Autonomous Cloud & Systems Simulator Engine
+title SysCalculus - Autonomous Cloud & Systems Simulator Engine
 color 0B
 
 echo ===============================================================================
-echo                RUNTIMEZERO (runtimezero.dev) - GHOST FOUNDER DAC
+echo                RUNTIMEZERO (syscalculus.dev) - GHOST FOUNDER DAC
 echo ===============================================================================
 echo [1/3] Verifying Python runtime environment...
 python --version >nul 2>&1

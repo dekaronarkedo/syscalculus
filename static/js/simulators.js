@@ -1,14 +1,14 @@
 /**
- * RuntimeZero - Client-Side Systems Simulators & Micro-Tools
+ * SysCalculus - Client-Side Systems Simulators & Micro-Tools
  * 100% In-Browser Execution • Zero Server Latency • Zero Data Exfiltration
  */
 
-window.RuntimeZero = window.RuntimeZero || {};
+window.SysCalculus = window.SysCalculus || {};
 
 // ============================================================================
 // 1. DATABASE CONNECTION POOL & DEADLOCK SIMULATOR
 // ============================================================================
-RuntimeZero.initDbPoolSimulator = function() {
+SysCalculus.initDbPoolSimulator = function() {
   const canvas = document.getElementById('simCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -288,7 +288,7 @@ RuntimeZero.initDbPoolSimulator = function() {
 // ============================================================================
 // 2. AWS EGRESS COST CALCULATOR
 // ============================================================================
-RuntimeZero.initEgressCalculator = function() {
+SysCalculus.initEgressCalculator = function() {
   const egressSlider = document.getElementById('egressTbSlider');
   const egressValDisplay = document.getElementById('egressTbDisplay');
   const regionSelect = document.getElementById('awsRegionSelect');
@@ -374,7 +374,7 @@ RuntimeZero.initEgressCalculator = function() {
       terraformSnippet.value = `# Cloudflare R2 Zero-Egress Storage Bucket
 resource "cloudflare_r2_bucket" "production_media" {
   account_id = var.cloudflare_account_id
-  name       = "runtimezero-assets-${region}"
+  name       = "syscalculus-assets-${region}"
   location   = "auto" # Routed to closest edge POP
 }
 
@@ -396,7 +396,7 @@ resource "aws_s3_bucket" "source" {
 // ============================================================================
 // 3. AIR-GAPPED ZERO-TRUST LOG SANITIZER
 // ============================================================================
-RuntimeZero.initLogSanitizer = function() {
+SysCalculus.initLogSanitizer = function() {
   const input = document.getElementById('logRawInput');
   const output = document.getElementById('logSanitizedOutput');
   const redactAws = document.getElementById('redactAwsKeys');
@@ -518,7 +518,7 @@ Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6
 // ============================================================================
 // 4. CRONTAB VISUALIZER & 24-HOUR HEATMAP
 // ============================================================================
-RuntimeZero.initCronVisualizer = function() {
+SysCalculus.initCronVisualizer = function() {
   const cronInput = document.getElementById('cronExpressionInput');
   const humanDisplay = document.getElementById('cronHumanReadable');
   const heatmapContainer = document.getElementById('cronHeatmapGrid');
@@ -645,7 +645,7 @@ RuntimeZero.initCronVisualizer = function() {
 // ============================================================================
 // 5. DOCKER RUN TO DOCKER COMPOSE CONVERTER
 // ============================================================================
-RuntimeZero.initDockerConverter = function() {
+SysCalculus.initDockerConverter = function() {
   const input = document.getElementById('dockerRunInput');
   const output = document.getElementById('dockerComposeOutput');
   const btnConvert = document.getElementById('btnDockerConvert');
@@ -723,7 +723,7 @@ RuntimeZero.initDockerConverter = function() {
 // ============================================================================
 // 6. LLM VRAM & QUANTIZATION SIZER
 // ============================================================================
-RuntimeZero.initLlmVramSizer = function() {
+SysCalculus.initLlmVramSizer = function() {
   const paramSlider = document.getElementById('llmParamSlider');
   const paramDisplay = document.getElementById('llmParamDisplay');
   const quantSelect = document.getElementById('llmQuantSelect');
@@ -790,10 +790,10 @@ RuntimeZero.initLlmVramSizer = function() {
 
 // Global Bootstrapper on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
-  RuntimeZero.initDbPoolSimulator();
-  RuntimeZero.initEgressCalculator();
-  RuntimeZero.initLogSanitizer();
-  RuntimeZero.initCronVisualizer();
-  RuntimeZero.initDockerConverter();
-  RuntimeZero.initLlmVramSizer();
+  SysCalculus.initDbPoolSimulator();
+  SysCalculus.initEgressCalculator();
+  SysCalculus.initLogSanitizer();
+  SysCalculus.initCronVisualizer();
+  SysCalculus.initDockerConverter();
+  SysCalculus.initLlmVramSizer();
 });

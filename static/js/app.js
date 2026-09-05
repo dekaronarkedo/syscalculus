@@ -1,5 +1,5 @@
 /**
- * RuntimeZero - Client-Side App Helpers
+ * SysCalculus - Client-Side App Helpers
  * Search palette, clipboard helpers, and fast tag filter.
  */
 

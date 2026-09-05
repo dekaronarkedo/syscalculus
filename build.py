@@ -1,5 +1,5 @@
 """
-RuntimeZero - Master Static Site Generator (SSG) Compiler
+SysCalculus - Master Static Site Generator (SSG) Compiler
 Compiles Markdown & Jinja2 templates into a high-performance, SEO-optimized production bundle in dist/
 """
 
@@ -18,7 +18,7 @@ def build_site():
     templates_dir = os.path.join(workspace_root, "templates")
     static_dir = os.path.join(workspace_root, "static")
 
-    print("[BUILD] Initializing RuntimeZero Production Compiler...")
+    print("[BUILD] Initializing SysCalculus Production Compiler...")
 
     # Clean & recreate dist
     if os.path.exists(dist_dir):
@@ -43,7 +43,7 @@ def build_site():
     adsense_pub_id = os.environ.get("ADSENSE_PUB_ID", "")
 
     # Read static assets for guaranteed self-contained inline loading (works on file:/// and http://)
-    css_path = os.path.join(static_dir, "css", "runtimezero.css")
+    css_path = os.path.join(static_dir, "css", "syscalculus.css")
     inline_css = ""
     if os.path.exists(css_path):
         with open(css_path, "r", encoding="utf-8") as f:

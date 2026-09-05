@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}{{ tool.title }} | RuntimeZero{% endblock %}
+{% block title %}{{ tool.title }} | SysCalculus{% endblock %}
 {% block description %}{{ tool.meta_description }}{% endblock %}
-{% block canonical %}https://runtimezero.dev/tools/{{ tool.slug }}.html{% endblock %}
+{% block canonical %}https://syscalculus.dev/tools/{{ tool.slug }}.html{% endblock %}
 {% block og_title %}{{ tool.title }}{% endblock %}
 {% block og_description %}{{ tool.meta_description }}{% endblock %}
 
@@ -22,8 +22,8 @@
   "description": "{{ tool.meta_description }}",
   "author": {
     "@type": "Organization",
-    "name": "RuntimeZero Engineering Team",
-    "url": "https://runtimezero.dev/about.html"
+    "name": "SysCalculus Engineering Team",
+    "url": "https://syscalculus.dev/about.html"
   }
 }
 </script>
@@ -37,14 +37,14 @@
   "dateModified": "{{ tool.date_modified }}",
   "author": {
     "@type": "Organization",
-    "name": "RuntimeZero Engineering Team"
+    "name": "SysCalculus Engineering Team"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "RuntimeZero",
+    "name": "SysCalculus",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://runtimezero.dev/static/images/logo.svg"
+      "url": "https://syscalculus.dev/static/images/logo.svg"
     }
   }
 }
@@ -58,19 +58,19 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://runtimezero.dev/"
+      "item": "https://syscalculus.dev/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Systems Simulators",
-      "item": "https://runtimezero.dev/#tools"
+      "item": "https://syscalculus.dev/#tools"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "{{ tool.title }}",
-      "item": "https://runtimezero.dev/tools/{{ tool.slug }}.html"
+      "item": "https://syscalculus.dev/tools/{{ tool.slug }}.html"
     }
   ]
 }
@@ -425,7 +425,7 @@
       <div class="article-header-meta">
         <div class="author-avatar-row">
           <div class="author-badge">
-            <span class="author-name">RuntimeZero SRE & Systems Architecture Team</span>
+            <span class="author-name">SysCalculus SRE & Systems Architecture Team</span>
             <span class="post-date">Published {{ tool.date_published }} • Peer Reviewed by Infrastructure Working Group</span>
           </div>
         </div>

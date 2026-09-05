@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}RuntimeZero — Systems Engineering Simulators & Cloud Calculators{% endblock %}</title>
+  <title>{% block title %}SysCalculus — Systems Engineering Simulators & Cloud Calculators{% endblock %}</title>
   <meta name="description" content="{% block description %}Client-side visual systems simulators, PostgreSQL connection pool models, AWS egress pricing calculators, and crontab visualizers. Evaluated 100% in-browser with zero telemetry.{% endblock %}">
   
   <meta name="google-site-verification" content="{% block google_verification %}GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE{% endblock %}">
   
-  <link rel="canonical" href="{% block canonical %}https://runtimezero.dev/{% endblock %}">
-  <link rel="alternate" type="application/rss+xml" title="RuntimeZero Engineering Feed" href="/rss.xml">
+  <link rel="canonical" href="{% block canonical %}https://syscalculus.dev/{% endblock %}">
+  <link rel="alternate" type="application/rss+xml" title="SysCalculus Engineering Feed" href="/rss.xml">
   
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="RuntimeZero">
-  <meta property="og:title" content="{% block og_title %}RuntimeZero — Systems Engineering Simulators & Cloud Calculators{% endblock %}">
+  <meta property="og:site_name" content="SysCalculus">
+  <meta property="og:title" content="{% block og_title %}SysCalculus — Systems Engineering Simulators & Cloud Calculators{% endblock %}">
   <meta property="og:description" content="{% block og_description %}Client-side systems engineering tools. Zero servers, zero telemetry.{% endblock %}">
   <meta property="og:url" content="{{ self.canonical() }}">
   
   <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@runtimezerodev">
+  <meta name="twitter:site" content="@syscalculusdev">
   <meta name="twitter:title" content="{% block twitter_title %}{{ self.og_title() }}{% endblock %}">
   <meta name="twitter:description" content="{% block twitter_desc %}{{ self.og_description() }}{% endblock %}">
   
@@ -39,7 +39,7 @@
 {{ inline_css | safe }}
   </style>
   {% endif %}
-  <link rel="stylesheet" href="/static/css/runtimezero.css?v=6">
+  <link rel="stylesheet" href="/static/css/syscalculus.css?v=6">
 
   <!-- Google AdSense Script (Pub ID configurable via environment) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}" crossorigin="anonymous"></script>
@@ -49,13 +49,13 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "RuntimeZero",
-    "url": "https://runtimezero.dev/",
+    "name": "SysCalculus",
+    "url": "https://syscalculus.dev/",
     "description": "Client-side systems engineering simulators and cloud cost calculators.",
     "publisher": {
       "@type": "Organization",
-      "name": "RuntimeZero Engineering Team",
-      "url": "https://runtimezero.dev/about.html"
+      "name": "SysCalculus Engineering Team",
+      "url": "https://syscalculus.dev/about.html"
     }
   }
   </script>
@@ -177,7 +177,7 @@
 
       <div class="footer-bottom">
         <div class="footer-copy">
-          © 2026 RuntimeZero. Evaluated 100% in client-side V8. Zero telemetry collected.
+          © 2026 SysCalculus. Evaluated 100% in client-side V8. Zero telemetry collected.
         </div>
         <div class="compliance-tags">
           <span class="tag">GDPR Compliant</span>

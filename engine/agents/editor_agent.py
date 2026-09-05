@@ -1,5 +1,5 @@
 """
-RuntimeZero - Autonomous Editor-in-Chief Agent
+SysCalculus - Autonomous Editor-in-Chief Agent
 Reviews, enriches, and formats 1,500+ word engineering post-mortems and technical articles.
 """
 

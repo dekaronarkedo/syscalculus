@@ -1,5 +1,5 @@
 @echo off
-title RuntimeZero - Automated GitHub & Cloud Deployment
+title SysCalculus - Automated GitHub & Cloud Deployment
 color 0A
 
 echo ===============================================================================
@@ -9,7 +9,7 @@ echo.
 echo [1/3] Git repository is initialized and all 37 platform files are committed.
 echo.
 echo Lutfen GitHub'da actigin bos repository'nin HTTPS linkini buraya yapistir:
-echo (Ornek: https://github.com/KULLANICI_ADIN/runtimezero.git)
+echo (Ornek: https://github.com/KULLANICI_ADIN/syscalculus.git)
 echo.
 set /p REPO_URL="GitHub Repo URL: "
 

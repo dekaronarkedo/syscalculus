@@ -1,5 +1,5 @@
 """
-RuntimeZero - Autonomous SRE & Site Reliability Department Agent
+SysCalculus - Autonomous SRE & Site Reliability Department Agent
 Monitors system health, page build verification, AdSense compliance, and updates the Company Ledger.
 """
 

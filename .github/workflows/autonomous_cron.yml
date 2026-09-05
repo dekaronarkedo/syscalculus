@@ -1,4 +1,4 @@
-name: RuntimeZero 24/7 Autonomous Ghost Founder Cron
+name: SysCalculus 24/7 Autonomous Ghost Founder Cron
 
 on:
   schedule:
@@ -40,8 +40,8 @@ jobs:
 
       - name: Commit & Push Ledger and State Updates
         run: |
-          git config --global user.name "RuntimeZero Ghost Founder"
-          git config --global user.email "bot@runtimezero.dev"
+          git config --global user.name "SysCalculus Ghost Founder"
+          git config --global user.email "bot@syscalculus.dev"
           git add data/ content/
           if git diff --staged --quiet; then
             echo "No autonomous changes to commit."
