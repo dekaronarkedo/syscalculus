@@ -1,10 +1,10 @@
 {
-  "sentinel_uptime_seconds": 3102,
-  "total_cycles": 163,
-  "anomalies_detected": 18,
-  "auto_heals_executed": 18,
+  "sentinel_uptime_seconds": 3521,
+  "total_cycles": 185,
+  "anomalies_detected": 19,
+  "auto_heals_executed": 19,
   "last_status": "100% HEALTHY / OPERATIONAL",
-  "last_cycle_timestamp": "2026-09-05T17:38:18.486650Z",
+  "last_cycle_timestamp": "2026-09-05T17:45:18.238055Z",
   "recent_incidents": [
     {
       "timestamp": "2026-09-05T16:46:37.572795Z",
@@ -112,6 +112,12 @@
       "timestamp": "2026-09-05T17:12:11.412021Z",
       "type": "CORRUPTED_OR_OUTDATED_BUILD",
       "reason": "File changed or added: static\\css\\runtimezero.css",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T17:44:35.625692Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: static\\_redirects",
       "action_taken": "Executed build.build_site() cleanly."
     }
   ]

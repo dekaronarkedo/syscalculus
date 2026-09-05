@@ -1,66 +1,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://syscalculus.dev/</loc>
+    <loc>https://runtimezero.dev/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/about.html</loc>
+    <loc>https://runtimezero.dev/about.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/privacy.html</loc>
+    <loc>https://runtimezero.dev/privacy.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/aws-egress-calculator.html</loc>
+    <loc>https://runtimezero.dev/tools/aws-egress-calculator.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/airgapped-log-sanitizer.html</loc>
+    <loc>https://runtimezero.dev/tools/airgapped-log-sanitizer.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/kafka-consumer-lag-estimator.html</loc>
+    <loc>https://runtimezero.dev/tools/kafka-consumer-lag-estimator.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/db-deadlock-simulator.html</loc>
+    <loc>https://runtimezero.dev/tools/db-deadlock-simulator.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/docker-compose-converter.html</loc>
+    <loc>https://runtimezero.dev/tools/docker-compose-converter.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/k8s-oom-killer-sizing.html</loc>
+    <loc>https://runtimezero.dev/tools/k8s-oom-killer-sizing.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/llm-vram-sizer.html</loc>
+    <loc>https://runtimezero.dev/tools/llm-vram-sizer.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://syscalculus.dev/tools/crontab-visualizer.html</loc>
+    <loc>https://runtimezero.dev/tools/crontab-visualizer.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
