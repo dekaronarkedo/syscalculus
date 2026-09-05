@@ -97,7 +97,18 @@
   {% block top_ad %}
   <aside class="ad-leaderboard-container" aria-label="Advertisement">
     <div class="ad-slot-frame">
-      <span class="ad-disclosure-label">ADVERTISEMENT</span>
+      <div class="ad-top-meta">
+        <span class="ad-disclosure-label">SPONSORED BY GOOGLE ADSENSE PARTNER NETWORK</span>
+        <span class="ad-format-chip">728x90 LEADERBOARD</span>
+      </div>
+      <div class="ad-placeholder-creative">
+        <div class="ad-creative-left">
+          <span class="ad-sponsor-badge">SPONSORED</span>
+          <span class="ad-creative-title">High-Throughput Global Edge Compute & Dedicated NVMe</span>
+          <span class="ad-creative-desc">Zero noisy neighbors, 10Gbps unmetered bandwidth, and enterprise SLAs.</span>
+        </div>
+        <a href="/about.html" class="ad-creative-btn">Deploy Infrastructure →</a>
+      </div>
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="{{ adsense_pub_id or 'ca-pub-XXXXXXXXXXXXXXXX' }}"

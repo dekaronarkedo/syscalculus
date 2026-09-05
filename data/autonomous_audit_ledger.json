@@ -1,10 +1,10 @@
 {
-  "sentinel_uptime_seconds": 1327,
-  "total_cycles": 70,
-  "anomalies_detected": 14,
-  "auto_heals_executed": 14,
+  "sentinel_uptime_seconds": 1634,
+  "total_cycles": 86,
+  "anomalies_detected": 18,
+  "auto_heals_executed": 18,
   "last_status": "100% HEALTHY / OPERATIONAL",
-  "last_cycle_timestamp": "2026-09-05T17:08:44.003479Z",
+  "last_cycle_timestamp": "2026-09-05T17:13:51.226305Z",
   "recent_incidents": [
     {
       "timestamp": "2026-09-05T16:46:37.572795Z",
@@ -86,6 +86,30 @@
     },
     {
       "timestamp": "2026-09-05T17:07:04.264890Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: static\\css\\runtimezero.css",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T17:11:12.510676Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: templates\\base.html",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T17:11:32.123113Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: templates\\tool.html",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T17:11:51.732966Z",
+      "type": "CORRUPTED_OR_OUTDATED_BUILD",
+      "reason": "File changed or added: static\\css\\syscalculus.css",
+      "action_taken": "Executed build.build_site() cleanly."
+    },
+    {
+      "timestamp": "2026-09-05T17:12:11.412021Z",
       "type": "CORRUPTED_OR_OUTDATED_BUILD",
       "reason": "File changed or added: static\\css\\runtimezero.css",
       "action_taken": "Executed build.build_site() cleanly."
