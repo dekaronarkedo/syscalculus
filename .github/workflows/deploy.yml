@@ -39,6 +39,17 @@ jobs:
         run: |
           python -c "import os; assert os.path.exists('dist/index.html'), 'Missing dist/index.html'; assert os.path.exists('dist/sitemap.xml'), 'Missing dist/sitemap.xml'; print('Site build verified successfully.')"
 
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+        continue-on-error: true
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -47,4 +58,4 @@ jobs:
           projectName: 'syscalculus'
           directory: 'dist'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true # Allows smooth fallback if secrets are not set yet
+        continue-on-error: true
